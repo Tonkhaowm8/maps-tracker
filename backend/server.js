@@ -1,6 +1,7 @@
 // Import dependencies
 const express = require('express');
 const app = express();
+const os = require('os'); // Import the 'os' module
 const port = 3000;
 
 // Middleware to parse JSON and URL-encoded data
@@ -10,12 +11,6 @@ app.use(express.urlencoded({ extended: true }));
 // Basic route
 app.get('/', (req, res) => {
   res.send('Hello, World!');
-});
-
-// Route with a parameter
-app.get('/user/:name', (req, res) => {
-  const name = req.params.name;
-  res.send(`Hello, ${name}!`);
 });
 
 // Route to handle POST request and log data
@@ -29,7 +24,23 @@ app.post('/data', (req, res) => {
   res.send(`You sent: ${key}`);
 });
 
+// Function to get the local IP address
+function getLocalIP() {
+  const interfaces = os.networkInterfaces();
+  for (const name of Object.keys(interfaces)) {
+    for (const net of interfaces[name]) {
+      // Check if it's IPv4 and not internal (not the loopback interface)
+      if (net.family === 'IPv4' && !net.internal) {
+        return net.address;
+      }
+    }
+  }
+}
+
 // Start the server
 app.listen(port, '0.0.0.0', () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  const localIP = getLocalIP(); // Get the local IP
+  console.log(`Server is running on:`);
+  console.log(`- Local:    http://localhost:${port}`);
+  console.log(`- Network:  http://${localIP}:${port}`);
 });
