@@ -71,7 +71,7 @@ const MapComponent = () => {
           )}
 
           {/* Rendering the directions on the map */}
-          {/* {directionsResponse && (
+          {directionsResponse && (
             <DirectionsRenderer
               directions={directionsResponse}
               options={{
@@ -81,7 +81,7 @@ const MapComponent = () => {
                 },
               }}
             />
-          )} */}
+          )}
         </GoogleMap>
       </LoadScript>
     </div>
