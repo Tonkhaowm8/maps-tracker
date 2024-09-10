@@ -1,7 +1,7 @@
 // Import dependencies
 const express = require('express');
 const os = require('os');
-const { checkDir } = require('./components/dirManagement');
+const { checkDir, createDir } = require('./components/dirManagement');
 
 
 // Initialize Stuff
@@ -40,14 +40,14 @@ app.get('/', (req, res) => {
 
 // Route to handle POST request and log data
 app.post('/data', (req, res) => {
-  const { key } = req.body;
+  const { sessionId, key } = req.body;
   
   // Log the POST request body to the console
   console.log('POST request received with data:', req.body);
   
   // Check Directory
-  if (checkDir(req.body.sessionId)) {
-    
+  if (!checkDir("./data", sessionId)) {
+    const fileDir = createDir("./data", sessionId)
   }
 
   res.send(`You sent: ${key}`);
