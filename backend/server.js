@@ -1,28 +1,16 @@
 // Import dependencies
 const express = require('express');
+const os = require('os');
+const { checkDir } = require('./components/dirManagement');
+
+
+// Initialize Stuff
 const app = express();
-const os = require('os'); // Import the 'os' module
 const port = 3000;
 
 // Middleware to parse JSON and URL-encoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-// Basic route
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
-
-// Route to handle POST request and log data
-app.post('/data', (req, res) => {
-  const { key } = req.body;
-  
-  // Log the POST request body to the console
-  console.log('POST request received with data:', req.body);
-  console.log('payload: ', req.body.payload[0].values);
-
-  res.send(`You sent: ${key}`);
-});
 
 // Function to get the local IP address
 function getLocalIP() {
@@ -43,4 +31,24 @@ app.listen(port, '0.0.0.0', () => {
   console.log(`Server is running on:`);
   console.log(`- Local:    http://localhost:${port}`);
   console.log(`- Network:  http://${localIP}:${port}`);
+});
+
+// Basic route
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+// Route to handle POST request and log data
+app.post('/data', (req, res) => {
+  const { key } = req.body;
+  
+  // Log the POST request body to the console
+  console.log('POST request received with data:', req.body);
+  
+  // Check Directory
+  if (checkDir(req.body.sessionId)) {
+    
+  }
+
+  res.send(`You sent: ${key}`);
 });
