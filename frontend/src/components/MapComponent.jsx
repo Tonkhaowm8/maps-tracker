@@ -36,6 +36,13 @@ const MapComponent = () => {
     }
   };
 
+  // Clear directions when currentPosition updates to avoid showing old routes
+  useEffect(() => {
+    setDirectionsResponse(null);
+    console.log(currentPosition)
+    console.log("hi")
+  }, [currentPosition]);
+ 
   return (
     <div className="w-screen h-screen">
       <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
@@ -44,10 +51,11 @@ const MapComponent = () => {
           center={currentPosition || { lat: -3.745, lng: -38.523 }}
           zoom={currentPosition ? 15 : 10}
         >
+          
           {currentPosition && (
             <Circle
               center={currentPosition}
-              radius={20} // Adjust the radius for the size of the dot
+              radius={20}
               options={{
                 strokeColor: '#ff0000',
                 strokeOpacity: 0.8,
@@ -57,18 +65,18 @@ const MapComponent = () => {
               }}
             />
           )}
-
-          {/* Requesting directions from currentPosition to a destination */}
+          {/* Requesting directions from currentPosition to the 7-Eleven */}
           {currentPosition && (
             <DirectionsService
               options={{
-                destination: { lat: 35.6895, lng: 139.6917 },
-                origin: {lat: 35.66082, lng: 139.79576}, // Your current position
-                travelMode: 'WALKING', // Adjust to SCOOTER or similar if available
+                destination: { lat: 35.654732718490315, lng: 139.79708285715478 }, // 7-Eleven location
+                origin: currentPosition, // Your current position
+                travelMode: 'WALKING',
               }}
               callback={directionsCallback}
             />
           )}
+          
 
           {/* Rendering the directions on the map */}
           {directionsResponse && (
