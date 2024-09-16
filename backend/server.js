@@ -1,8 +1,10 @@
 // Import dependencies
 const express = require('express');
 const os = require('os');
-const { checkDir, createDir } = require('./components/dirManagement');
+const { checkDir, createDir, storeData } = require('./components/dirManagement');
 
+// Global Variables
+var newDir = false;
 
 // Initialize Stuff
 const app = express();
@@ -38,17 +40,44 @@ app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
 
-// Route to handle POST request and log data
+// Check Directory
 app.post('/data', (req, res) => {
   const { sessionId, key } = req.body;
+  
+  // Define the directories to check
+  const check = [
+    ["./data", sessionId],
+    [`./data/${sessionId}`, "CSV"],
+    [`./data/${sessionId}`, "JSON"]
+  ]
   
   // Log the POST request body to the console
   console.log('POST request received with data:', req.body);
   
-  // Check Directory
-  if (!checkDir("./data", sessionId)) {
-    const fileDir = createDir("./data", sessionId)
-  }
+  // Check and Create Directory
+  check.forEach(dir => {
+    console.log("Directory: ", dir)
+    if (!checkDir(dir[0], dir[1])) {
+      createDir(dir[0], dir[1]); // Ensure the directory is created
+    }
+  });
+
+// Extract variables
+req.body.payload.forEach(payload => {
+  const { name, time, values } = payload;
+
+  // Add time to values
+  const updatedValues = { ...values, time }; // Adds the time to the values object
+
+  console.log(`Name: ${name}, Time: ${time}, Value: ${JSON.stringify(updatedValues)}`);
+
+  // Store the updated values (including time) in the storeData function
+  storeData(sessionId, name, updatedValues);
+});
+
+  // Check and Create CSV and JSON files for new file and data
+  
 
   res.send(`You sent: ${key}`);
 });
+
