@@ -40,7 +40,6 @@ const MapComponent = () => {
   useEffect(() => {
     setDirectionsResponse(null);
     console.log(currentPosition)
-    console.log("hi")
   }, [currentPosition]);
  
   return (
@@ -55,12 +54,12 @@ const MapComponent = () => {
           {currentPosition && (
             <Circle
               center={currentPosition}
-              radius={20}
-              options={{
-                strokeColor: '#ff0000',
+              radius={10}
+              options={{ 
+                strokeColor: '#a5c5e8',
                 strokeOpacity: 0.8,
                 strokeWeight: 2,
-                fillColor: '#ff0000',
+                fillColor: '#4179b5',
                 fillOpacity: 1,
               }}
             />

@@ -1,0 +1,13 @@
+/* Set html and body to full height */
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Ensure the MapContainer takes full height */
+  .leaflet-container {
+    height: 100%;
+    width: 100%;
+  }
+  
