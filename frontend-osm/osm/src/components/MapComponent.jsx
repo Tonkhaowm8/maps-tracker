@@ -1,6 +1,6 @@
 // src/MapComponent.js
 import React, { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
 import L from 'leaflet';
 import './MapComponent.css';
 
@@ -15,6 +15,14 @@ L.Icon.Default.mergeOptions({
 const MapComponent = () => {
   const defaultPosition = [35.6895, 139.6917]; // Default position (Tokyo)
   const [userPosition, setUserPosition] = useState(null); // State for user location
+
+  // Define stress zones as an array of objects with latitude, longitude, and radius
+  // Waseda location 35.69755888453857, 139.72284916456653
+  const stressZones = [
+    { lat: 35.698112, lng: 139.722671, radius: 20 }, // Example zone in Tokyo
+    { lat: 35.697512, lng: 139.722114, radius: 20 }, // Another zone (Ginza area)
+    // Add more stress zones as needed
+  ];
 
   // Get the user's location
   useEffect(() => {
@@ -40,7 +48,8 @@ const MapComponent = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
-      
+
+      {/* Display user's current position */}
       {userPosition && (
         <Marker position={userPosition}>
           <Popup>
@@ -50,6 +59,7 @@ const MapComponent = () => {
         </Marker>
       )}
 
+      {/* Fallback marker for default position (Tokyo) */}
       {!userPosition && (
         <Marker position={defaultPosition}>
           <Popup>
@@ -57,6 +67,21 @@ const MapComponent = () => {
           </Popup>
         </Marker>
       )}
+
+      {/* Render stress zones as red transparent circles */}
+      {stressZones.map((zone, index) => (
+        <Circle
+          key={index}
+          center={[zone.lat, zone.lng]}
+          radius={zone.radius} // in meters
+          pathOptions={{ color: 'red', fillColor: 'red', fillOpacity: 0.3 }} // Red transparent circle
+        >
+          <Popup>
+            Stress Zone: <br />
+            Latitude: {zone.lat}, Longitude: {zone.lng}
+          </Popup>
+        </Circle>
+      ))}
     </MapContainer>
   );
 };
