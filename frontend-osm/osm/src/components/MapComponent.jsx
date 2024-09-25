@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { MapContainer, TileLayer, Marker, Popup, Circle, useMap } from 'react-leaflet'; // Import useMap from react-leaflet
-import L from 'leaflet'; // Import Leaflet for map functionality
+import { MapContainer, TileLayer, Marker, Popup, Circle, useMap } from 'react-leaflet';
+import L from 'leaflet';
 import './MapComponent.css';
+import googleMapArrow from './svg/googleMapArrow.svg'; // Adjust the path as necessary
+
+const googleMapsArrowIcon = new L.Icon({
+  iconUrl: googleMapArrow, // Use the imported image file
+  iconSize: [30, 30], // Size of the icon
+  iconAnchor: [21, 21], // Center the icon
+  className: 'arrow-icon', // Optional: add a class name if needed for additional styling
+});
+
 
 // Default marker icon fix for React-Leaflet
 delete L.Icon.Default.prototype._getIconUrl;
@@ -12,14 +21,30 @@ L.Icon.Default.mergeOptions({
 });
 
 const MapComponent = () => {
-  const defaultPosition = [35.6895, 139.6917]; // Default position (Tokyo) if user's location is not available
+  const defaultPosition = [35.6895, 139.6917]; // Default position (Tokyo)
   const [userPosition, setUserPosition] = useState(null); // State for storing the user's current location
+  const [heading, setHeading] = useState(0); // State for storing heading (direction)
 
-  // Define an array of stress zones with latitude, longitude, and radius.
+  // Define stress zones with latitude, longitude, and radius.
   const stressZones = [
     { lat: 35.698112, lng: 139.722671, radius: 20 },
     { lat: 35.697512, lng: 139.722114, radius: 20 },
   ];
+
+  // Function to calculate bearing (direction) between two coordinates
+  const calculateBearing = (startLat, startLng, endLat, endLng) => {
+    const startLatRad = (startLat * Math.PI) / 180;
+    const startLngRad = (startLng * Math.PI) / 180;
+    const endLatRad = (endLat * Math.PI) / 180;
+    const endLngRad = (endLng * Math.PI) / 180;
+
+    const dLng = endLngRad - startLngRad;
+    const y = Math.sin(dLng) * Math.cos(endLatRad);
+    const x = Math.cos(startLatRad) * Math.sin(endLatRad) - Math.sin(startLatRad) * Math.cos(endLatRad) * Math.cos(dLng);
+    const bearing = (Math.atan2(y, x) * 180) / Math.PI;
+
+    return (bearing + 360) % 360; // Ensure the result is between 0 and 360
+  };
 
   // Custom component to adjust map view to user's location
   const SetViewToUserPosition = ({ userPosition }) => {
@@ -28,47 +53,62 @@ const MapComponent = () => {
     // When userPosition is updated, set the map view to user's position with a specific zoom level
     useEffect(() => {
       if (userPosition) {
-        map.setView(userPosition, 25); // Adjust zoom level (16 is a closer zoom level)
+        map.setView(userPosition, 16); // Adjust zoom level (16 is a closer zoom level)
       }
     }, [userPosition, map]);
 
     return null; // This component does not render anything
   };
 
-  // useEffect hook to get the user's current location using the browser's geolocation API.
+  // useEffect hook to get the user's location and update position and heading using `watchPosition`
   useEffect(() => {
+    let previousPosition = null;
+
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
+      const watchId = navigator.geolocation.watchPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
-          setUserPosition([latitude, longitude]); // Update userPosition state
-          console.log(`User's location: Latitude ${latitude}, Longitude ${longitude}`);
+          const newPosition = [latitude, longitude];
+
+          // If there's a previous position, calculate the heading (bearing)
+          if (previousPosition) {
+            const [prevLat, prevLng] = previousPosition;
+            const bearing = calculateBearing(prevLat, prevLng, latitude, longitude);
+            setHeading(bearing); // Update heading (direction)
+          }
+
+          setUserPosition(newPosition); // Update user's position
+          previousPosition = newPosition; // Store the new position as previous for the next update
         },
         (error) => {
-          console.error('Error fetching user location:', error); // Handle errors (e.g., permission denied)
-        }
+          console.error('Error fetching user location:', error);
+        },
+        { enableHighAccuracy: true, maximumAge: 10000, timeout: 5000 }
       );
+
+      return () => navigator.geolocation.clearWatch(watchId); // Cleanup on unmount
     } else {
       console.error('Geolocation is not supported by this browser.');
     }
-  }, []);
+  }, []); // Empty dependency array ensures this effect runs only once
 
   return (
-    // MapContainer is the main map component provided by React-Leaflet.
-    // It takes a center (default or user position) and zoom level, along with style to fill the page.
-    <MapContainer center={userPosition || defaultPosition} zoom={30} style={{ height: '100vh', width: '100%' }}>
-      {/* TileLayer is used to load and display map tiles from OpenStreetMap. */}
+    <MapContainer center={userPosition || defaultPosition} zoom={13} style={{ height: '100vh', width: '100%' }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
 
-      {/* Component to programmatically adjust map view to user's position */}
       {userPosition && <SetViewToUserPosition userPosition={userPosition} />}
 
-      {/* If user's location is available, place a marker at that location. */}
+      {/* Render user's position as an arrow icon */}
       {userPosition && (
-        <Marker position={userPosition}>
+        <Marker 
+          position={userPosition} 
+          icon={googleMapsArrowIcon} 
+          rotationAngle={heading} // Use the heading to rotate the icon
+          rotationOrigin="center" // Rotate around the center of the icon
+        >
           <Popup>
             You are here! <br />
             Latitude: {userPosition[0]}, Longitude: {userPosition[1]}
@@ -76,7 +116,7 @@ const MapComponent = () => {
         </Marker>
       )}
 
-      {/* If user's location is not available, fallback to a marker at the default position (Tokyo). */}
+      {/* Fallback marker for default position */}
       {!userPosition && (
         <Marker position={defaultPosition}>
           <Popup>
@@ -85,13 +125,13 @@ const MapComponent = () => {
         </Marker>
       )}
 
-      {/* Render each stress zone as a red transparent circle on the map. */}
+      {/* Render each stress zone as a red transparent circle */}
       {stressZones.map((zone, index) => (
         <Circle
-          key={index} // Unique key for each circle
-          center={[zone.lat, zone.lng]} // Set the center of the circle
-          radius={zone.radius} // Set the radius of the circle (in meters)
-          pathOptions={{ color: 'red', fillColor: 'red', fillOpacity: 0.3 }} // Red transparent circle styling
+          key={index}
+          center={[zone.lat, zone.lng]}
+          radius={zone.radius}
+          pathOptions={{ color: 'red', fillColor: 'red', fillOpacity: 0.3 }}
         >
           <Popup>
             Stress Zone: <br />
