@@ -11,7 +11,6 @@ const googleMapsArrowIcon = new L.Icon({
   className: 'arrow-icon', // Optional: add a class name if needed for additional styling
 });
 
-
 // Default marker icon fix for React-Leaflet
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -77,6 +76,9 @@ const MapComponent = () => {
             setHeading(bearing); // Update heading (direction)
           }
 
+          // Log to console and update state
+          console.log(`New Position: Latitude ${latitude}, Longitude ${longitude}`);
+
           setUserPosition(newPosition); // Update user's position
           previousPosition = newPosition; // Store the new position as previous for the next update
         },
@@ -93,53 +95,65 @@ const MapComponent = () => {
   }, []); // Empty dependency array ensures this effect runs only once
 
   return (
-    <MapContainer center={userPosition || defaultPosition} zoom={13} style={{ height: '100vh', width: '100%' }}>
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
+    <div>
+      <MapContainer center={userPosition || defaultPosition} zoom={13} style={{ height: '100vh', width: '100%' }}>
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
 
-      {userPosition && <SetViewToUserPosition userPosition={userPosition} />}
+        {userPosition && <SetViewToUserPosition userPosition={userPosition} />}
 
-      {/* Render user's position as an arrow icon */}
-      {userPosition && (
-        <Marker 
-          position={userPosition} 
-          icon={googleMapsArrowIcon} 
-          rotationAngle={heading} // Use the heading to rotate the icon
-          rotationOrigin="center" // Rotate around the center of the icon
-        >
-          <Popup>
-            You are here! <br />
-            Latitude: {userPosition[0]}, Longitude: {userPosition[1]}
-          </Popup>
-        </Marker>
+        {/* Render user's position as an arrow icon */}
+        {userPosition && (
+          <Marker 
+            position={userPosition} 
+            icon={googleMapsArrowIcon} 
+            rotationAngle={heading} // Use the heading to rotate the icon
+            rotationOrigin="center" // Rotate around the center of the icon
+          >
+            <Popup>
+              You are here! <br />
+              Latitude: {userPosition[0]}, Longitude: {userPosition[1]}
+            </Popup>
+          </Marker>
+        )}
+
+        {/* Fallback marker for default position */}
+        {!userPosition && (
+          <Marker position={defaultPosition}>
+            <Popup>
+              This is Tokyo! <br /> Unable to fetch your current location.
+            </Popup>
+          </Marker>
+        )}
+
+        {/* Render each stress zone as a red transparent circle */}
+        {stressZones.map((zone, index) => (
+          <Circle
+            key={index}
+            center={[zone.lat, zone.lng]}
+            radius={zone.radius}
+            pathOptions={{ color: 'red', fillColor: 'red', fillOpacity: 0.3 }}
+          >
+            <Popup>
+              Stress Zone: <br />
+              Latitude: {zone.lat}, Longitude: {zone.lng}
+            </Popup>
+          </Circle>
+        ))}
+      </MapContainer>
+
+      {/* Display the current latitude and longitude */}
+      {userPosition ? (
+        <div className="location-info">
+          <p>Current Latitude: {userPosition[0]}</p>
+          <p>Current Longitude: {userPosition[1]}</p>
+        </div>
+      ) : (
+        <p>Fetching your location...</p>
       )}
-
-      {/* Fallback marker for default position */}
-      {!userPosition && (
-        <Marker position={defaultPosition}>
-          <Popup>
-            This is Tokyo! <br /> Unable to fetch your current location.
-          </Popup>
-        </Marker>
-      )}
-
-      {/* Render each stress zone as a red transparent circle */}
-      {stressZones.map((zone, index) => (
-        <Circle
-          key={index}
-          center={[zone.lat, zone.lng]}
-          radius={zone.radius}
-          pathOptions={{ color: 'red', fillColor: 'red', fillOpacity: 0.3 }}
-        >
-          <Popup>
-            Stress Zone: <br />
-            Latitude: {zone.lat}, Longitude: {zone.lng}
-          </Popup>
-        </Circle>
-      ))}
-    </MapContainer>
+    </div>
   );
 };
 
