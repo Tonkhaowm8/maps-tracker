@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { calculateArray, rootMeanSquare } = require('./dataManipulation.js')
+const { calculateArray, rootMeanSquare, normalize } = require('./dataManipulation.js')
 
 // Function to check and create directory
 function checkDir(dirPath, dirName) {
@@ -14,7 +14,7 @@ function checkDir(dirPath, dirName) {
     console.log(`Directory ${dirName} at ${dirPath} doesn't exist`);
     return false;
   } else {
-    console.log(`Directory ${dirName} already exists.`);
+    // console.log(`Directory ${dirName} already exists.`);
     return true;
   }
 }
@@ -95,9 +95,13 @@ async function findVibration(name, data, accArr) {
     accArr.x.push(data.x);
     accArr.y.push(data.y);
     accArr.z.push(data.z);
+  } else if (name === "microphone") {
+
+    accArr.mic.push(data.dBFS);
+
   } else if (name === "location") {
 
-    // Find Root Mean Square
+    // Find Root Mean Square of acceleration
     vbr = {
       x: rootMeanSquare(accArr.x),
       y: rootMeanSquare(accArr.y),
@@ -105,9 +109,32 @@ async function findVibration(name, data, accArr) {
     }
     accArr.vbr = vbr
 
-    // log vibration
-    console.log(`Vibration: ${JSON.stringify(vbr)}`)
+    // Mic Level
 
+    // Take Average of Mic Level
+    const avgMic = calculateArray(accArr.mic, "mean");
+    console.log("average Mic: ", avgMic);
+
+    // Normalize Mic Level
+    const normMic = normalize(avgMic, 0, 30);
+    console.log("Normalize Mic: ", normMic);
+
+    // log vibration
+    console.log(`Vibration: ${JSON.stringify(vbr)}`);
+    console.log("data: ", data)
+    // Store Data
+    const pack = {
+      latitude: data.latitude,
+      longitude: data.longitude,
+      verticalVibration: vbr.z,
+      time: data.time,
+      mic: normMic
+    };
+
+    console.log(pack);
+
+    updateMapData(pack);
+    
     // Clear all arrays in one go by resetting their length
     accArr.x.length = 0;
     accArr.y.length = 0;
@@ -115,7 +142,47 @@ async function findVibration(name, data, accArr) {
   }
 
   return accArr;
+
+}
+
+function updateMapData(newData) {
+  const filePath = path.join(__dirname, '..', 'map-data.json');
+  console.log(filePath);
+
+  // Read the current data from map-data.json
+  fs.readFile(filePath, 'utf-8', (err, data) => {
+    if (err) {
+      console.error('Error reading map-data.json:', err);
+      return;
+    }
+
+    let jsonData;
+    try {
+      jsonData = JSON.parse(data); // Parse the existing JSON data
+    } catch (parseErr) {
+      console.error('Error parsing JSON data:', parseErr);
+      return;
+    }
+
+    // Ensure the file contains an array to add new entries
+    if (!Array.isArray(jsonData)) {
+      console.error('Error: map-data.json must contain an array.');
+      return;
+    }
+
+    // Append new data to the existing array
+    jsonData.push(newData);
+
+    // Write the updated array back to map-data.json
+    fs.writeFile(filePath, JSON.stringify(jsonData, null, 2), 'utf-8', (writeErr) => {
+      if (writeErr) {
+        console.error('Error writing to map-data.json:', writeErr);
+        return;
+      }
+      console.log('New data added to map-data.json successfully!');
+    });
+  });
 }
 
 
-module.exports = { checkDir, createDir, storeData, findVibration };
+module.exports = { checkDir, createDir, storeData, findVibration, updateMapData };

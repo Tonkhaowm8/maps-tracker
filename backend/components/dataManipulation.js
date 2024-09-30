@@ -27,4 +27,14 @@ function rootMeanSquare(data) {
   return Math.sqrt(meanOfSquares);
 }
 
-module.exports = { calculateArray, rootMeanSquare }
+function normalize(value, min, max) {
+  if (min === max) {
+    console.error("Min and max cannot be the same value.");
+    return null; // or return 0 depending on your needs
+  }
+
+  // Normalize and make the value absolute
+  return Math.abs((value - min) / (max - min));
+}
+
+module.exports = { calculateArray, rootMeanSquare, normalize }

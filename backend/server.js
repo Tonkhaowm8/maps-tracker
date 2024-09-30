@@ -1,7 +1,7 @@
 // Import dependencies
 const express = require('express');
 const os = require('os');
-const { checkDir, createDir, storeData, findVibration} = require('./components/dirManagement');
+const { checkDir, createDir, storeData, findVibration, updateMapData} = require('./components/dirManagement');
 
 // Global Variables
 var newDir = false;
@@ -67,7 +67,8 @@ app.post('/data', (req, res) => {
     x: [],
     y: [],
     z: [],
-    vbr: []
+    vbr: [],
+    mic: []
   }; // Initialize the accelerometer data array outside
 
   req.body.payload.forEach(async (payload) => {
@@ -75,22 +76,24 @@ app.post('/data', (req, res) => {
   
     // Round the Unix timestamp to the nearest second
     const roundedTime = Math.floor(time / 1000); // Convert ms to seconds
+
+    let updatedValues;
   
     // Check if the current timestamp is the same as the last one for this name
     if (lastTimeData[name] !== roundedTime) {
       // Add rounded time to the values object
-      const updatedValues = { ...values, time: roundedTime };
+      updatedValues = { ...values, time: roundedTime };
   
       // console.log(`Name: ${name}, Time: ${roundedTime}, Value: ${JSON.stringify(updatedValues)}`);
   
       // Store the updated values (including rounded time)
       storeData(sessionId, name, updatedValues);
-  
+
       // Update the last processed time for this name
       lastTimeData[name] = roundedTime;
     } else {
       // If the time is the same, replace the previous data
-      const updatedValues = { ...values, time: roundedTime };
+      updatedValues = { ...values, time: roundedTime };
   
       // console.log(`Replacing previous data for Name: ${name}, Time: ${roundedTime}, Value: ${JSON.stringify(updatedValues)}`);
   
@@ -99,7 +102,7 @@ app.post('/data', (req, res) => {
     }
   
     // Find Vibration
-    accArr = await findVibration(name, values, accArr); // Apply the findVibration function here
+    accArr = await findVibration(name, updatedValues, accArr); // Apply the findVibration function here
   });
   
   // Check and Create CSV and JSON files for new file and data
@@ -107,4 +110,6 @@ app.post('/data', (req, res) => {
   res.send(`You sent: ${key}`);
 });
 
-app.get('/update', )
+app.get('/get-data', (req, res) => {
+  res.send()
+})
