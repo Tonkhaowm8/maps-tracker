@@ -20,7 +20,7 @@ L.Icon.Default.mergeOptions({
 });
 
 const MapComponent = () => {
-  const defaultPosition = [0,0]; // Default position (Tokyo)
+  const defaultPosition = [35.6895, 139.6917]; // Default position (Tokyo)
   const [userPosition, setUserPosition] = useState(null); // State for storing the user's current location
   const [heading, setHeading] = useState(0); // State for storing heading (direction)
 
@@ -49,10 +49,10 @@ const MapComponent = () => {
   const SetViewToUserPosition = ({ userPosition }) => {
     const map = useMap(); // Get access to the map instance
 
-    // When userPosition is updated, set the map view to user's position with a specific zoom level
+    // When userPosition is updated, set the map view to user's position while maintaining the current zoom level
     useEffect(() => {
       if (userPosition) {
-        map.setView(userPosition, 16); // Adjust zoom level (16 is a closer zoom level)
+        map.setView(userPosition, map.getZoom()); // Keep the current zoom level
       }
     }, [userPosition, map]);
 
@@ -100,7 +100,7 @@ const MapComponent = () => {
 
   return (
     <div>
-      <MapContainer center={userPosition || defaultPosition} zoom={13} style={{ height: '100vh', width: '100%' }}>
+      <MapContainer center={userPosition || defaultPosition} zoom={16} style={{ height: '100vh', width: '100%' }}> {/* Set zoom to 16 */}
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
