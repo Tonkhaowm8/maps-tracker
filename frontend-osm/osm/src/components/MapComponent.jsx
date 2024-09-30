@@ -20,14 +20,14 @@ L.Icon.Default.mergeOptions({
 });
 
 const MapComponent = () => {
-  const defaultPosition = [35.6895, 139.6917]; // Default position (Tokyo)
+  const defaultPosition = [0,0]; // Default position (Tokyo)
   const [userPosition, setUserPosition] = useState(null); // State for storing the user's current location
   const [heading, setHeading] = useState(0); // State for storing heading (direction)
 
   // Define stress zones with latitude, longitude, and radius.
   const stressZones = [
-    { lat: 35.698112, lng: 139.722671, radius: 20 },
-    { lat: 35.697512, lng: 139.722114, radius: 20 },
+    { lat: 35.703111, lng: 139.720416, radius: 20 },
+    { lat: 35.702621, lng: 139.71998, radius: 20 },
   ];
 
   // Function to calculate bearing (direction) between two coordinates
@@ -85,7 +85,11 @@ const MapComponent = () => {
         (error) => {
           console.error('Error fetching user location:', error);
         },
-        { enableHighAccuracy: true, maximumAge: 10000, timeout: 5000 }
+        { 
+          enableHighAccuracy: true, // Ensure you get GPS data (more accurate)
+          maximumAge: 10000,        // Cache the location for 10 seconds
+          timeout: 5000             // Timeout after 5 seconds if no position is found
+        }
       );
 
       return () => navigator.geolocation.clearWatch(watchId); // Cleanup on unmount
