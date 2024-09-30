@@ -1,6 +1,8 @@
 // Import dependencies
 const express = require('express');
 const os = require('os');
+const fs = require('fs');
+const path = require('path');
 const { checkDir, createDir, storeData, findVibration, updateMapData} = require('./components/dirManagement');
 
 // Global Variables
@@ -111,5 +113,20 @@ app.post('/data', (req, res) => {
 });
 
 app.get('/get-data', (req, res) => {
-  res.send()
-})
+  const filePath = path.join(__dirname, 'map-data.json');
+  
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Error reading the file');
+    }
+
+    try {
+      const jsonData = JSON.parse(data);
+      res.json(jsonData);
+    } catch (parseError) {
+      console.error(parseError);
+      res.status(500).send('Error parsing the JSON');
+    }
+  });
+});
