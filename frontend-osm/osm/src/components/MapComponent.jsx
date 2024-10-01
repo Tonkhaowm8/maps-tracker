@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, Circle, useMap } from 'react-le
 import L from 'leaflet';
 import './MapComponent.css';
 import googleMapArrow from './svg/googleMapArrow.svg'; // Adjust the path as necessary
+import axios from 'axios';
 
 const googleMapsArrowIcon = new L.Icon({
   iconUrl: googleMapArrow, // Use the imported image file
@@ -21,8 +22,10 @@ L.Icon.Default.mergeOptions({
 
 const MapComponent = () => {
   const defaultPosition = [35.6895, 139.6917]; // Default position (Tokyo)
+  const backendEndpoint = "https://172.31.43.34:4000"; // Backend URL (CHANGE everytime you launch backend)
   const [userPosition, setUserPosition] = useState(null); // State for storing the user's current location
   const [heading, setHeading] = useState(0); // State for storing heading (direction)
+  const [backendData, setBackendData] = useState(null);
 
   // Define stress zones with latitude, longitude, and radius.
   const stressZones = [
@@ -59,9 +62,39 @@ const MapComponent = () => {
     return null; // This component does not render anything
   };
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(`${backendEndpoint}/get-data`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            // Add other headers if necessary (e.g., Authorization)
+          }
+        });
+  
+        if (!response.ok) {
+          throw new Error(`Error: ${response.status}`);
+        }
+  
+        const result = await response.json();
+        setBackendData(result); // Store the fetched data in the state
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        // Handle the error as needed
+      }
+    };
+  
+    if (backendData === null) {
+      fetchData(); // Call the fetch function only if backendData is null
+    }
+  }, [backendData]); // Add backendData as a dependency
+
   // useEffect hook to get the user's location and update position and heading using `watchPosition`
   useEffect(() => {
     let previousPosition = null;
+
+    console.log(`Backend Data: ${backendData}`);
 
     if (navigator.geolocation) {
       const watchId = navigator.geolocation.watchPosition(

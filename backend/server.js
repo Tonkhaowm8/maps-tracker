@@ -2,15 +2,30 @@
 const express = require('express');
 const os = require('os');
 const fs = require('fs');
+const https = require('https');
+const http = require('http');
 const path = require('path');
 const { checkDir, createDir, storeData, findVibration, updateMapData} = require('./components/dirManagement');
+const cors = require('cors');
 
 // Global Variables
 var newDir = false;
 
+// Disable HTTPS Shit
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
+
 // Initialize Stuff
 const app = express();
-const port = 3000;
+const port = 4000;
+
+// Use CORS
+app.use(cors());
+
+// HTTPS Option
+const sslOptions = {
+  key: fs.readFileSync('./cert/server.key'),
+  cert: fs.readFileSync('./cert/server.cert')
+};
 
 // Middleware to parse JSON and URL-encoded data
 app.use(express.json());
@@ -29,12 +44,20 @@ function getLocalIP() {
   }
 }
 
-// Start the server
-app.listen(port, '0.0.0.0', () => {
+// Start the HTTPS server
+https.createServer(sslOptions, app).listen(port, '0.0.0.0', () => {
   const localIP = getLocalIP(); // Get the local IP
   console.log(`Server is running on:`);
-  console.log(`- Local:    http://localhost:${port}`);
-  console.log(`- Network:  http://${localIP}:${port}`);
+  console.log(`- Local:    https://localhost:${port}`);
+  console.log(`- Network:  https://${localIP}:${port}`);
+});
+
+// Start the HTTP server
+http.createServer(app).listen(port + 1, '0.0.0.0', () => {
+  const localIP = getLocalIP(); // Get the local IP
+  console.log(`HTTP Server is running on:`);
+  console.log(`- Local:    http://localhost:${port + 1}`);
+  console.log(`- Network:  http://${localIP}:${port + 1}`);
 });
 
 // Basic route
@@ -110,23 +133,4 @@ app.post('/data', (req, res) => {
   // Check and Create CSV and JSON files for new file and data
 
   res.send(`You sent: ${key}`);
-});
-
-app.get('/get-data', (req, res) => {
-  const filePath = path.join(__dirname, 'map-data.json');
-  
-  fs.readFile(filePath, 'utf8', (err, data) => {
-    if (err) {
-      console.error(err);
-      return res.status(500).send('Error reading the file');
-    }
-
-    try {
-      const jsonData = JSON.parse(data);
-      res.json(jsonData);
-    } catch (parseError) {
-      console.error(parseError);
-      res.status(500).send('Error parsing the JSON');
-    }
-  });
 });
