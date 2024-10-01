@@ -101,44 +101,47 @@ async function findVibration(name, data, accArr) {
 
   } else if (name === "location") {
 
-    // Find Root Mean Square of acceleration
-    vbr = {
-      x: rootMeanSquare(accArr.x),
-      y: rootMeanSquare(accArr.y),
-      z: rootMeanSquare(accArr.z)
+    if (accArr.mic) {  
+
+      // Find Root Mean Square of acceleration
+      vbr = {
+        x: rootMeanSquare(accArr.x),
+        y: rootMeanSquare(accArr.y),
+        z: rootMeanSquare(accArr.z)
+      }
+      accArr.vbr = vbr
+
+      // Mic Level
+
+      // Take Average of Mic Level
+      const avgMic = calculateArray(accArr.mic, "mean");
+      console.log("average Mic: ", avgMic);
+
+      // Normalize Mic Level
+      const normMic = normalize(avgMic, 0, 30);
+      console.log("Normalize Mic: ", normMic);
+
+      // log vibration
+      console.log(`Vibration: ${JSON.stringify(vbr)}`);
+      console.log("data: ", data)
+      // Store Data
+      const pack = {
+        latitude: data.latitude,
+        longitude: data.longitude,
+        verticalVibration: vbr.z,
+        time: data.time,
+        mic: normMic
+      };
+
+      console.log(pack);
+
+      updateMapData(pack);
+      
+      // Clear all arrays in one go by resetting their length
+      accArr.x.length = 0;
+      accArr.y.length = 0;
+      accArr.z.length = 0;
     }
-    accArr.vbr = vbr
-
-    // Mic Level
-
-    // Take Average of Mic Level
-    const avgMic = calculateArray(accArr.mic, "mean");
-    console.log("average Mic: ", avgMic);
-
-    // Normalize Mic Level
-    const normMic = normalize(avgMic, 0, 30);
-    console.log("Normalize Mic: ", normMic);
-
-    // log vibration
-    console.log(`Vibration: ${JSON.stringify(vbr)}`);
-    console.log("data: ", data)
-    // Store Data
-    const pack = {
-      latitude: data.latitude,
-      longitude: data.longitude,
-      verticalVibration: vbr.z,
-      time: data.time,
-      mic: normMic
-    };
-
-    console.log(pack);
-
-    updateMapData(pack);
-    
-    // Clear all arrays in one go by resetting their length
-    accArr.x.length = 0;
-    accArr.y.length = 0;
-    accArr.z.length = 0;
   }
 
   return accArr;

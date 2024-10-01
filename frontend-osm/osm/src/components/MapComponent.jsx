@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, Marker, Popup, Circle, useMap } from 'react-le
 import L from 'leaflet';
 import './MapComponent.css';
 import googleMapArrow from './svg/googleMapArrow.svg'; // Adjust the path as necessary
-import axios from 'axios';
 
 const googleMapsArrowIcon = new L.Icon({
   iconUrl: googleMapArrow, // Use the imported image file
@@ -22,7 +21,7 @@ L.Icon.Default.mergeOptions({
 
 const MapComponent = () => {
   const defaultPosition = [35.6895, 139.6917]; // Default position (Tokyo)
-  const backendEndpoint = "https://172.31.43.34:4000"; // Backend URL (CHANGE everytime you launch backend)
+  const backendEndpoint = "https://192.168.0.104:4000"; // Backend URL (CHANGE everytime you launch backend)
   const [userPosition, setUserPosition] = useState(null); // State for storing the user's current location
   const [heading, setHeading] = useState(0); // State for storing heading (direction)
   const [backendData, setBackendData] = useState(null);
@@ -78,6 +77,7 @@ const MapComponent = () => {
         }
   
         const result = await response.json();
+        console.log("result: ", result);
         setBackendData(result); // Store the fetched data in the state
       } catch (error) {
         console.error('Error fetching data:', error);

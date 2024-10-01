@@ -1,0 +1,93 @@
+[
+  {
+    "altitude": 58.12056980728569,
+    "speedAccuracy": -1,
+    "bearingAccuracy": -1,
+    "latitude": 35.70351102341715,
+    "altitudeAboveMeanSeaLevel": 22.1101594984478,
+    "bearing": -1,
+    "horizontalAccuracy": 17.11887919889565,
+    "verticalAccuracy": 30,
+    "longitude": 139.71951374271285,
+    "speed": -1,
+    "time": 1727793980434489
+  },
+  {
+    "altitude": 58.13837578686537,
+    "speedAccuracy": -1,
+    "bearingAccuracy": -1,
+    "latitude": 35.703468822833344,
+    "altitudeAboveMeanSeaLevel": 22.127965478027477,
+    "bearing": -1,
+    "horizontalAccuracy": 17.19978624215469,
+    "verticalAccuracy": 30,
+    "longitude": 139.7195158025466,
+    "speed": -1,
+    "time": 1727793986292097
+  },
+  {
+    "altitude": 58.09733586327796,
+    "speedAccuracy": -1,
+    "bearingAccuracy": -1,
+    "latitude": 35.703468822833344,
+    "altitudeAboveMeanSeaLevel": 22.08692555444007,
+    "bearing": -1,
+    "horizontalAccuracy": 17.19978624215469,
+    "verticalAccuracy": 30,
+    "longitude": 139.7195158025466,
+    "speed": -1,
+    "time": 1727793992303488
+  },
+  {
+    "altitude": 58.09960560815101,
+    "speedAccuracy": -1,
+    "bearingAccuracy": -1,
+    "latitude": 35.703468822833344,
+    "altitudeAboveMeanSeaLevel": 18.91208653466468,
+    "bearing": -1,
+    "horizontalAccuracy": 17.19978624215469,
+    "verticalAccuracy": 30.009113303258097,
+    "longitude": 139.7195158025466,
+    "speed": -1,
+    "time": 1727793997189080
+  },
+  {
+    "altitude": 58.2536224347353,
+    "speedAccuracy": -1,
+    "bearingAccuracy": -1,
+    "latitude": 35.703468822833344,
+    "altitudeAboveMeanSeaLevel": 22.243212125897408,
+    "bearing": -1,
+    "horizontalAccuracy": 17.19978624215469,
+    "verticalAccuracy": 30,
+    "longitude": 139.7195158025466,
+    "speed": -1,
+    "time": 1727793998522764
+  },
+  {
+    "altitude": 58.12850745767973,
+    "speedAccuracy": -1,
+    "bearingAccuracy": -1,
+    "latitude": 35.703468822833344,
+    "altitudeAboveMeanSeaLevel": 22.11809714884184,
+    "bearing": -1,
+    "horizontalAccuracy": 17.19978624215469,
+    "verticalAccuracy": 30,
+    "longitude": 139.7195158025466,
+    "speed": -1,
+    "time": 1727794004409983
+  },
+  {
+    "altitude": 58.111490083213,
+    "speedAccuracy": -1,
+    "bearingAccuracy": -1,
+    "latitude": 35.703468822833344,
+    "altitudeAboveMeanSeaLevel": 22.10107977437511,
+    "bearing": -1,
+    "horizontalAccuracy": 17.19978624215469,
+    "verticalAccuracy": 30,
+    "longitude": 139.7195158025466,
+    "speed": -1,
+    "time": 1727794016351285
+  }
+]

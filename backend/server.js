@@ -10,6 +10,7 @@ const cors = require('cors');
 
 // Global Variables
 var newDir = false;
+var localIP;
 
 // Disable HTTPS Shit
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
@@ -20,6 +21,11 @@ const port = 4000;
 
 // Use CORS
 app.use(cors());
+
+// Create an agent that disables SSL certificate validation
+const httpsAgent = new https.Agent({
+  rejectUnauthorized: false,
+});
 
 // HTTPS Option
 const sslOptions = {
@@ -46,19 +52,14 @@ function getLocalIP() {
 
 // Start the HTTPS server
 https.createServer(sslOptions, app).listen(port, '0.0.0.0', () => {
-  const localIP = getLocalIP(); // Get the local IP
+  localIP = getLocalIP(); // Get the local IP
   console.log(`Server is running on:`);
   console.log(`- Local:    https://localhost:${port}`);
   console.log(`- Network:  https://${localIP}:${port}`);
 });
 
-// Start the HTTP server
-http.createServer(app).listen(port + 1, '0.0.0.0', () => {
-  const localIP = getLocalIP(); // Get the local IP
-  console.log(`HTTP Server is running on:`);
-  console.log(`- Local:    http://localhost:${port + 1}`);
-  console.log(`- Network:  http://${localIP}:${port + 1}`);
-});
+// Start HTTP server
+http.createServer(app).listen(port + 1, '0.0.0.0', () => {});
 
 // Basic route
 app.get('/', (req, res) => {
@@ -130,7 +131,37 @@ app.post('/data', (req, res) => {
     accArr = await findVibration(name, updatedValues, accArr); // Apply the findVibration function here
   });
   
-  // Check and Create CSV and JSON files for new file and data
-
   res.send(`You sent: ${key}`);
+});
+
+// Proxy to bypass SSL restriction
+app.get('/get-data', async (req, res) => {
+  try {
+    const response = await fetch(`https://${localIP}:4000/getData`, { agent: httpsAgent });
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    res.status(500).send('Error fetching data');
+  }
+});
+
+// Get data
+app.get('/getData', (req, res) => {
+  const filePath = path.join('map-data.json');
+  
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Error reading the file');
+    }
+
+    try {
+      const jsonData = JSON.parse(data);
+      res.json(jsonData);
+    } catch (parseError) {
+      console.error(parseError);
+      res.status(500).send('Error parsing the JSON');
+    }
+  });
 });
