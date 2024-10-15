@@ -27,6 +27,12 @@ const MapComponent = () => {
   const [heading, setHeading] = useState(0); // Store the heading (user's direction)
   const [backendData, setBackendData] = useState([]); // State for holding data fetched from the backend
 
+  // Dummy stress zones (with blue color)
+  const dummyStressZones = [
+    { lat: 35.703765, lng: 139.719079, radius: 10 },
+    { lat: 35.704419, lng: 139.719120, radius: 10 },
+  ];
+
   // Custom component to adjust the map view based on the user's location
   const SetViewToUserPosition = ({ userPosition }) => {
     const map = useMap(); // Get access to the map instance
@@ -141,7 +147,7 @@ const MapComponent = () => {
           </Marker>
         )}
 
-        {/* Render each stress zone from backendData */}
+        {/* Render each real stress zone from backendData (in red) */}
         {backendData.map((zone, index) => (
           <Circle
             key={index}
@@ -152,6 +158,21 @@ const MapComponent = () => {
             <Popup>
               Stress Zone: <br />
               Latitude: {zone.latitude}, Longitude: {zone.longitude}
+            </Popup>
+          </Circle>
+        ))}
+
+        {/* Render each dummy stress zone (in blue) */}
+        {dummyStressZones.map((zone, index) => (
+          <Circle
+            key={index}
+            center={[zone.lat, zone.lng]}
+            radius={zone.radius}
+            pathOptions={{ color: 'blue', fillColor: 'blue', fillOpacity: 0.3 }} // Blue for dummy zones
+          >
+            <Popup>
+              Dummy Stress Zone <br />
+              Latitude: {zone.lat}, Longitude: {zone.lng}
             </Popup>
           </Circle>
         ))}
