@@ -31,6 +31,7 @@ const MapComponent = () => {
   const [lastAlertedZones, setLastAlertedZones] = useState({}); // Track last alerted zones
   const [alertActive, setAlertActive] = useState(false);
   const [alertedZones, setAlertedZones] = useState(new Set()); // Track zones that have alerted
+  const [alertMessage, setAlertMessage] = useState(null);
 
 
   // Dummy stress zones (with blue color)
@@ -102,7 +103,7 @@ const MapComponent = () => {
         const currentTime = Date.now();
   
         // Check if the sound has been played for this zone in the last 3 seconds
-        if (!lastAlertedZones[zoneKey] || (currentTime - lastAlertedZones[zoneKey]) > 30000) {
+        if (!lastAlertedZones[zoneKey] || (currentTime - lastAlertedZones[zoneKey]) > 15000) {
           await playAlertSound(); // Play sound if not already alerted
   
           alertMessage += `You are entering stress zone #${index + 1} at Latitude: ${zone.lat || zone.latitude}, Longitude: ${zone.lng || zone.longitude}\n`;
@@ -118,15 +119,17 @@ const MapComponent = () => {
         closestZone = zone;
       }
     }
+
+    setAlertMessage(alertMessage);
   
     // Show alert message for nearby zones
-    if (alertMessage) {
-      const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-      if (isMobile) {
-        alert(alertMessage); // Alert for mobile
-      }
-      console.log(alertMessage); // Log for desktop
-    }
+    // if (alertMessage) {
+    //   const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    //   if (isMobile) {
+    //     alert(alertMessage); // Alert for mobile
+    //   }
+    //   console.log(alertMessage); // Log for desktop
+    // }
   
     // Log the distance to the closest zone
     if (closestZone) {
@@ -166,6 +169,21 @@ const MapComponent = () => {
 
     return null; // This component does not render any UI elements
   };
+
+  // Alert use Effect
+  useEffect(() => {
+
+    
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+    if (alertMessage) {
+      if (isMobile) {
+        alert(alertMessage); // Alert for mobile
+      }
+      console.log(alertMessage); // Log for desktop
+    }
+
+  }, [alertMessage])
 
   // Fetch data from the backend endpoint (only when backendData is null)
   useEffect(() => {
