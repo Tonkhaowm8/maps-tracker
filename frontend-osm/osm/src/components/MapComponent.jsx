@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, Circle, useMap } from 'react-le
 import L from 'leaflet';
 import './MapComponent.css';
 import googleMapArrow from './svg/googleMapArrow.svg'; // Import the custom arrow icon for user position
+import soundAudio from './audio/yamate-kudasai.mp3';
 
 // Create a custom icon for the user's position, resembling the Google Maps arrow
 const googleMapsArrowIcon = new L.Icon({
@@ -22,16 +23,120 @@ L.Icon.Default.mergeOptions({
 
 const MapComponent = () => {
   const defaultPosition = [35.6895, 139.6917]; // Default location (Tokyo)
-  const backendEndpoint = "https://cc70-122-222-0-252.ngrok-free.app"; // Backend endpoint for fetching additional data
+  const backendEndpoint = "https://1840-122-222-0-252.ngrok-free.app"; // Backend endpoint for fetching additional data
   const [userPosition, setUserPosition] = useState(null); // Store user's current location
   const [heading, setHeading] = useState(0); // Store the heading (user's direction)
   const [backendData, setBackendData] = useState([]); // State for holding data fetched from the backend
+  const [soundEnabled, setSoundEnabled] = useState(false); // Flag to check if sound can be played
 
   // Dummy stress zones (with blue color)
   const dummyStressZones = [
     { lat: 35.703765, lng: 139.719079, radius: 10 },
     { lat: 35.704419, lng: 139.719120, radius: 10 },
   ];
+  
+  // Load alert sound
+  const alertSound = new Audio(soundAudio); // Load the audio file
+  alertSound.preload = 'auto'; // Preload the audio file
+
+  // Function to play the alert sound
+  const playAlertSound = () => {
+    if (soundEnabled) {
+      alertSound.play().catch(error => {
+        console.error("Audio playback failed:", error);
+      });
+    }
+  };
+
+  // User interaction handler to enable sound playback
+  const handleUserInteraction = () => {
+    setSoundEnabled(true); // Correctly enable sound playback
+    document.removeEventListener('click', handleUserInteraction); // Remove listener after the first interaction
+    document.removeEventListener('touchstart', handleUserInteraction); // For mobile devices
+  };
+
+  // Add event listeners for user interaction
+  useEffect(() => {
+    document.addEventListener('click', handleUserInteraction);
+    document.addEventListener('touchstart', handleUserInteraction);
+
+    // Cleanup the event listeners on unmount
+    return () => {
+      document.removeEventListener('click', handleUserInteraction);
+      document.removeEventListener('touchstart', handleUserInteraction);
+    };
+  }, []);
+
+// Check if the user is inside or near any stress zones
+const checkProximity = (position) => {
+  const allZones = [...backendData, ...dummyStressZones]; // Combine real and dummy stress zones
+  let alertMessage = ""; // Initialize an empty message for the alert
+  let closestZone = null;
+  let closestDistance = Infinity; // Start with a large number
+
+  allZones.forEach((zone, index) => {
+    const distance = getDistance(position, [zone.lat || zone.latitude, zone.lng || zone.longitude]); // Calculate distance to the zone
+    const radius = zone.radius || 10; // Use radius from backend or default to 10
+
+    // Check if user is inside or near the stress zone (within radius)
+    if (distance <= radius) {
+      // Play alert sound if the user is entering the stress zone
+      playAlertSound();
+
+      // Add to the alert message
+      alertMessage += `You are entering stress zone #${index + 1} at Latitude: ${zone.lat || zone.latitude}, Longitude: ${zone.lng || zone.longitude}\n`;
+
+      // Calculate the distance to the closest stress zone
+      closestZone = zone;
+      closestDistance = distance;
+    } else {
+      // Update the closest zone if this one is closer
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestZone = zone;
+      }
+    }
+  });
+
+  // Show a single alert message if there are nearby zones
+  if (alertMessage) {
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      // Show a single alert with all nearby zones for mobile devices
+      alert(alertMessage);
+    }
+
+    // Log the alert message in the console for desktop users
+    console.log(alertMessage);
+  }
+
+  // If there is a closest zone, log the distance to it only in the console (for desktop)
+  if (closestZone) {
+    const isDesktop = !/Mobi|Android/i.test(navigator.userAgent);
+    
+    if (isDesktop) {
+      console.log(`You are ${closestDistance.toFixed(2)} meters away from the closest stress zone at Latitude: ${closestZone.lat || closestZone.latitude}, Longitude: ${closestZone.lng || closestZone.longitude}.`);
+    }
+  }
+};
+
+
+  // Function to calculate distance between two coordinates using Haversine formula
+  const getDistance = (pos1, pos2) => {
+    const R = 6371e3; // Radius of the Earth in meters
+    const lat1 = pos1[0] * Math.PI / 180;
+    const lat2 = pos2[0] * Math.PI / 180;
+    const deltaLat = (pos2[0] - pos1[0]) * Math.PI / 180;
+    const deltaLng = (pos2[1] - pos1[1]) * Math.PI / 180;
+
+    const a = Math.sin(deltaLat / 2) * Math.sin(deltaLat / 2) +
+              Math.cos(lat1) * Math.cos(lat2) *
+              Math.sin(deltaLng / 2) * Math.sin(deltaLng / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+    return R * c; // Distance in meters
+  };
 
   // Custom component to adjust the map view based on the user's location
   const SetViewToUserPosition = ({ userPosition }) => {
@@ -41,6 +146,7 @@ const MapComponent = () => {
     useEffect(() => {
       if (userPosition) {
         map.setView(userPosition, map.getZoom()); // Keep the current zoom level when centering the map
+        checkProximity(userPosition); // Check proximity to stress zones
       }
     }, [userPosition, map]);
 
@@ -148,19 +254,23 @@ const MapComponent = () => {
         )}
 
         {/* Render each real stress zone from backendData (in red) */}
-        {backendData.map((zone, index) => (
-          <Circle
-            key={index}
-            center={[zone.latitude, zone.longitude]} // Use latitude and longitude from backend data
-            radius={10} // Define a default radius (you can adjust this as needed)
-            pathOptions={{ color: 'red', fillColor: 'red', fillOpacity: 0.3 }} // Set circle styling
-          >
-            <Popup>
-              Stress Zone: <br />
-              Latitude: {zone.latitude}, Longitude: {zone.longitude}
-            </Popup>
-          </Circle>
-        ))}
+        {backendData.map((zone, index) => {
+          // Default radius if not provided
+          const radius = zone.radius || 10; // Assuming you can also define this in some way if your application has a logic for it
+          return (
+            <Circle
+              key={index}
+              center={[zone.latitude, zone.longitude]} // Use latitude and longitude from backend data
+              radius={radius} // Ensure this is a valid number
+              pathOptions={{ color: 'red', fillColor: 'red', fillOpacity: 0.3 }} // Set circle styling
+            >
+              <Popup>
+                Stress Zone: <br />
+                Latitude: {zone.latitude}, Longitude: {zone.longitude}
+              </Popup>
+            </Circle>
+          );
+        })}
 
         {/* Render each dummy stress zone (in blue) */}
         {dummyStressZones.map((zone, index) => (
