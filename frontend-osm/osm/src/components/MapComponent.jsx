@@ -28,25 +28,44 @@ const MapComponent = () => {
   const [heading, setHeading] = useState(0); // Store the heading (user's direction)
   const [backendData, setBackendData] = useState([]); // State for holding data fetched from the backend
   const [soundEnabled, setSoundEnabled] = useState(false); // Flag to check if sound can be played
+  const [lastAlertedZones, setLastAlertedZones] = useState({}); // Track last alerted zones
+  const [alertActive, setAlertActive] = useState(false);
+  const [alertedZones, setAlertedZones] = useState(new Set()); // Track zones that have alerted
+
 
   // Dummy stress zones (with blue color)
   const dummyStressZones = [
     { lat: 35.703765, lng: 139.719079, radius: 10 },
     { lat: 35.704419, lng: 139.719120, radius: 10 },
+    { lat: 13.86435311161947, lng: 139.71912, radius: 10 },
   ];
   
   // Load alert sound
   const alertSound = new Audio(soundAudio); // Load the audio file
   alertSound.preload = 'auto'; // Preload the audio file
 
-  // Function to play the alert sound
   const playAlertSound = () => {
-    if (soundEnabled) {
-      alertSound.play().catch(error => {
-        console.error("Audio playback failed:", error);
-      });
-    }
+    return new Promise((resolve, reject) => {
+      if (soundEnabled && !alertActive) {
+        alertSound.currentTime = 0; // Reset sound to start
+        alertSound.play()
+          .then(() => {
+            alertSound.onended = () => {
+              setAlertActive(false); // Reset alert active state when sound ends
+              resolve(); // Resolve when sound ends
+            };
+          })
+          .catch(error => {
+            console.error("Audio playback failed:", error);
+            reject(error); // Reject on error
+          });
+        setAlertActive(true); // Mark alert as active
+      } else {
+        resolve(); // If sound is disabled or alert is active, resolve immediately
+      }
+    });
   };
+  
 
   // User interaction handler to enable sound playback
   const handleUserInteraction = () => {
@@ -67,60 +86,54 @@ const MapComponent = () => {
     };
   }, []);
 
-// Check if the user is inside or near any stress zones
-const checkProximity = (position) => {
-  const allZones = [...backendData, ...dummyStressZones]; // Combine real and dummy stress zones
-  let alertMessage = ""; // Initialize an empty message for the alert
-  let closestZone = null;
-  let closestDistance = Infinity; // Start with a large number
-
-  allZones.forEach((zone, index) => {
-    const distance = getDistance(position, [zone.lat || zone.latitude, zone.lng || zone.longitude]); // Calculate distance to the zone
-    const radius = zone.radius || 10; // Use radius from backend or default to 10
-
-    // Check if user is inside or near the stress zone (within radius)
-    if (distance <= radius) {
-      // Play alert sound if the user is entering the stress zone
-      playAlertSound();
-
-      // Add to the alert message
-      alertMessage += `You are entering stress zone #${index + 1} at Latitude: ${zone.lat || zone.latitude}, Longitude: ${zone.lng || zone.longitude}\n`;
-
-      // Calculate the distance to the closest stress zone
-      closestZone = zone;
-      closestDistance = distance;
-    } else {
-      // Update the closest zone if this one is closer
-      if (distance < closestDistance) {
+  const checkProximity = async (position) => {
+    const allZones = [...backendData, ...dummyStressZones];
+    let alertMessage = "";
+    let closestZone = null;
+    let closestDistance = Infinity;
+  
+    for (const [index, zone] of allZones.entries()) {
+      const distance = getDistance(position, [zone.lat || zone.latitude, zone.lng || zone.longitude]);
+      const radius = zone.radius || 10;
+      const zoneKey = `${zone.lat || zone.latitude}-${zone.lng || zone.longitude}`;
+  
+      // Check if the user is within the stress zone
+      if (distance <= radius) {
+        const currentTime = Date.now();
+  
+        // Check if the sound has been played for this zone in the last 3 seconds
+        if (!lastAlertedZones[zoneKey] || (currentTime - lastAlertedZones[zoneKey]) > 30000) {
+          await playAlertSound(); // Play sound if not already alerted
+  
+          alertMessage += `You are entering stress zone #${index + 1} at Latitude: ${zone.lat || zone.latitude}, Longitude: ${zone.lng || zone.longitude}\n`;
+  
+          // Update the last alerted zones with the current time
+          setLastAlertedZones((prev) => ({ ...prev, [zoneKey]: currentTime }));
+        }
+  
+        closestZone = zone;
+        closestDistance = distance;
+      } else if (distance < closestDistance) {
         closestDistance = distance;
         closestZone = zone;
       }
     }
-  });
-
-  // Show a single alert message if there are nearby zones
-  if (alertMessage) {
-    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-    
-    if (isMobile) {
-      // Show a single alert with all nearby zones for mobile devices
-      alert(alertMessage);
+  
+    // Show alert message for nearby zones
+    if (alertMessage) {
+      const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        alert(alertMessage); // Alert for mobile
+      }
+      console.log(alertMessage); // Log for desktop
     }
-
-    // Log the alert message in the console for desktop users
-    console.log(alertMessage);
-  }
-
-  // If there is a closest zone, log the distance to it only in the console (for desktop)
-  if (closestZone) {
-    const isDesktop = !/Mobi|Android/i.test(navigator.userAgent);
-    
-    if (isDesktop) {
+  
+    // Log the distance to the closest zone
+    if (closestZone) {
       console.log(`You are ${closestDistance.toFixed(2)} meters away from the closest stress zone at Latitude: ${closestZone.lat || closestZone.latitude}, Longitude: ${closestZone.lng || closestZone.longitude}.`);
     }
-  }
-};
-
+  };
+  
 
   // Function to calculate distance between two coordinates using Haversine formula
   const getDistance = (pos1, pos2) => {
@@ -144,6 +157,7 @@ const checkProximity = (position) => {
 
     // Adjust the map's view whenever the user's position is updated
     useEffect(() => {
+      // console.log("Nigger");
       if (userPosition) {
         map.setView(userPosition, map.getZoom()); // Keep the current zoom level when centering the map
         checkProximity(userPosition); // Check proximity to stress zones
@@ -206,7 +220,7 @@ const checkProximity = (position) => {
         { 
           enableHighAccuracy: true, // Request high-accuracy location data
           maximumAge: 10000,        // Cache the location data for 10 seconds
-          timeout: 5000             // Timeout if no location data is available after 5 seconds
+          timeout: 50000             // Timeout if no location data is available after 5 seconds
         }
       );
 
