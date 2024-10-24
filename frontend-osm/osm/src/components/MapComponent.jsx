@@ -3,7 +3,9 @@ import { MapContainer, TileLayer, Marker, Popup, Circle, useMap } from 'react-le
 import L from 'leaflet';
 import './MapComponent.css';
 import googleMapArrow from './svg/googleMapArrow.svg'; // Import the custom arrow icon for user position
-import soundAudio from './audio/yamate-kudasai.mp3';
+// import soundAudio from './audio/yamate-kudasai.mp3';
+import soundAudio from './audio/family-mart.mp3';
+
 
 // Create a custom icon for the user's position, resembling the Google Maps arrow
 const googleMapsArrowIcon = new L.Icon({
@@ -23,20 +25,19 @@ L.Icon.Default.mergeOptions({
 
 const MapComponent = () => {
   const defaultPosition = [35.6895, 139.6917]; // Default location (Tokyo)
-  const backendEndpoint = "https://f382-202-18-108-32.ngrok-free.app"; // Backend endpoint for fetching additional data
+  const backendEndpoint = "https://sunbird-peaceful-mammal.ngrok-free.app"; // Backend endpoint for fetching additional data
   const [userPosition, setUserPosition] = useState(null); // Store user's current location
   const [backendData, setBackendData] = useState([]); // State for holding data fetched from the backend
   const [soundEnabled, setSoundEnabled] = useState(false); // Flag to check if sound can be played
   const [lastAlertedZones, setLastAlertedZones] = useState({}); // Track last alerted zones
   const [alertActive, setAlertActive] = useState(false);
-  const [alertedZones, setAlertedZones] = useState(new Set()); // Track zones that have alerted
   const [alertMessage, setAlertMessage] = useState(null);
 
   // Dummy stress zones (with blue color)
   const dummyStressZones = [
     { dumlat: 35.703765, dumlng: 139.719079, radius: 10 },
     { dumlat: 35.704419, dumlng: 139.719120, radius: 10 },
-    { dumlat: 13.86435311161947, dumlng: 139.71912, radius: 10 },
+    { dumlat: 13.86435311161947, dumlng: 100.66858680626, radius: 10 },
     { dumlat: 35.660877, dumlng: 139.795827, radius: 10 },
     { dumlat: 35.70344974666288, dumlng: 139.71944070586505, radius: 10 },
   ];
@@ -99,13 +100,13 @@ const MapComponent = () => {
   };
 
 
-  // // Fetch data from the backend endpoint (only when backendData is null)
-  // useEffect(() => {
-  //   // Call the fetch function if backendData hasn't been loaded yet
-  //   if (backendData.length === 0) {
-  //     fetchData();
-  //   }
-  // }, [backendData]); // The effect runs when backendData changes
+  // Fetch data from the backend endpoint (only when backendData is null)
+  useEffect(() => {
+    // Call the fetch function if backendData hasn't been loaded yet
+    if (backendData.length === 0) {
+      fetchData();
+    }
+  }, [backendData]); // The effect runs when backendData changes
 
 
   // Use the browser's geolocation API to get the user's current location and heading
@@ -186,17 +187,21 @@ const MapComponent = () => {
   
       if (distance <= radius) {
         const currentTime = Date.now();
+  
         // Check if the sound has been played for this zone in the last 15 seconds
         if (!lastAlertedZones[zoneKey] || (currentTime - lastAlertedZones[zoneKey]) > 15000) {
           playAlertSound(); // Try playing the sound
+
           // Set a timeout to display the alert message after a slight delay
           setTimeout(() => {
             alertMessage += `You are entering stress zone #${index + 1} at Latitude: ${zone.dumlat || zone.latitude}, Longitude: ${zone.dumlng || zone.longitude}\n`;
             setAlertMessage(alertMessage);
           }, 100); // Adjust the delay if needed (100ms here)
+    
           // Update the last alerted zones with the current time
           setLastAlertedZones((prev) => ({ ...prev, [zoneKey]: currentTime }));
         }
+  
         closestZone = zone;
         closestDistance = distance;
       } else if (distance < closestDistance) {
@@ -205,9 +210,6 @@ const MapComponent = () => {
       }
     }
     setAlertMessage(alertMessage);
-    if (closestZone) {
-      console.log(`You are ${closestDistance.toFixed(2)} meters away from the closest stress zone at Latitude: ${closestZone.dumlat || closestZone.latitude}, Longitude: ${closestZone.dumlng || closestZone.longitude}.`);
-    }
   };
   
 
@@ -225,8 +227,8 @@ const MapComponent = () => {
   }, [alertMessage])
 
   useEffect(() => {
-    console.log('Sound Enabled:', soundEnabled);
-  }, [soundEnabled]); // This will log the value whenever it changes
+    console.log('Alert Message:', alertMessage);
+  }, [alertMessage]); // This will log the value whenever it changes
   
 
   return (
