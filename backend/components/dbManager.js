@@ -41,8 +41,22 @@ const storeData = async (dataArray, collectionName ) => {
     }
 };
 
-const getData = () => {
-    // Your logic to get data
+const getData = async (collectionName, query = {}) => {
+    try {
+        // Access the collection dynamically using collectionName
+        const collection = mongoose.connection.collection(collectionName);
+
+        // Find documents based on the query
+        const data = await collection.find(query).toArray();
+
+        // Log the retrieved data (optional)
+        console.log(`Found ${data.length} documents in collection: ${collectionName}`);
+
+        return data; // Return the found data
+    } catch (error) {
+        console.error('Error fetching data:', error.message);
+        throw error; // Re-throw the error for handling in calling function
+    }
 };
 
 // Export the functions

@@ -1,5 +1,5 @@
 const {connectDb, storeData, getData} = require('../components/dbManager')
-const { flattenData } = require('../components/dataManipulation');
+const { flattenData, calculateRawData } = require('../components/dataManipulation');
 let connected = false;
 
 const store = async (req, res) => {
@@ -11,10 +11,11 @@ const store = async (req, res) => {
 
         // Flatten the incoming data from the request body
         const flattenedData = flattenData(req.body);
-        // console.log(flattenedData);
 
         // Store the flattened data into the database
         const result = await storeData(flattenedData, "raw-data");
+
+        calculateRawData(flattenedData);
 
         // Send a success response
         res.status(200).json({ success: true, message: 'Data stored successfully', data: result });

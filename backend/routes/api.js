@@ -6,6 +6,6 @@ const { retrieve } = require('./retrieve');
 
 // Define API routes
 router.post('/sendData', store); // Adjust if necessary
-// router.get('/getData', retrieve); // Adjust if necessary
+router.post('/getData', retrieve); // Adjust if necessary
 
 module.exports = router;
