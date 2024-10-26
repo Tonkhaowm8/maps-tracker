@@ -40,6 +40,48 @@ const MapComponent = () => {
     { dumlat: 35.660877, dumlng: 139.795827, radius: 10 },
     { dumlat: 35.70344974666288, dumlng: 139.71944070586505, radius: 10 },
   ];
+
+  const fetchData = async () => {
+    try {
+      const payload = {
+        "zVibration": { "$gt": 1.6, "$lte": 2.5 }
+      };
+  
+      const response = await fetch(`${backendEndpoint}/getData`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'ngrok-skip-browser-warning': '69420'
+        },
+        body: JSON.stringify(payload)
+      });
+  
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status}`);
+      }
+  
+      const result = await response.json(); // Parse JSON response
+      console.log("result: ", result);
+  
+      // Ensure that the result is an array before updating the state
+      if (Array.isArray(result)) {
+        setBackendData(result); // Store the fetched data if it's an array
+      } else {
+        console.error("Unexpected data format:", result); // Log if the result isn't an array
+      }
+    } catch (error) {
+      console.error('Error fetching data:', error); // Log any errors during the fetch process
+    }
+  };
+
+
+  // Fetch data from the backend endpoint (only when backendData is null)
+  useEffect(() => {
+    // Call the fetch function if backendData hasn't been loaded yet
+    if (backendData.length === 0) {
+      fetchData();
+    }
+  }, [backendData]); // The effect runs when backendData changes
   
   // Load alert sound
   const alertSound = new Audio(soundAudio); // Load the audio file
@@ -103,36 +145,6 @@ const MapComponent = () => {
 
     return null;
   };
-  
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch(`${backendEndpoint}/getData`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'ngrok-skip-browser-warning': '69420'
-        }
-      });
-      if (!response.ok) {
-        throw new Error(`Error: ${response.status}`);
-      }
-      const result = await response.json(); // Parse JSON response
-      console.log("result: ", result);
-      setBackendData(result); // Store the fetched data in state
-    } catch (error) {
-      console.error('Error fetching data:', error); // Log any errors during the fetch process
-    }
-  };
-
-
-  // Fetch data from the backend endpoint (only when backendData is null)
-  useEffect(() => {
-    // Call the fetch function if backendData hasn't been loaded yet
-    if (backendData.length === 0) {
-      fetchData();
-    }
-  }, [backendData]); // The effect runs when backendData changes
 
 
   // Use the browser's geolocation API to get the user's current location and heading
