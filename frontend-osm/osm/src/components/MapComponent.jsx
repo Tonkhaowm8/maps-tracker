@@ -25,7 +25,7 @@ L.Icon.Default.mergeOptions({
 
 const MapComponent = () => {
   const defaultPosition = [35.6895, 139.6917]; // Default location (Tokyo)
-  const backendEndpoint = "https://sunbird-peaceful-mammal.ngrok-free.app"; // Backend endpoint for fetching additional data
+  const backendEndpoint = "https://sunbird-peaceful-mammal.ngrok-free.app/api"; // Backend endpoint for fetching additional data
   const [userPosition, setUserPosition] = useState(null); // Store user's current location
   const [backendData, setBackendData] = useState([]); // State for holding data fetched from the backend
   const [soundEnabled, setSoundEnabled] = useState(false); // Flag to check if sound can be played
@@ -46,7 +46,7 @@ const MapComponent = () => {
   const alertSound = new Audio(soundAudio); // Load the audio file
   alertSound.preload = 'auto'; // Preload the audio file
 
-  const playAlertSound = () => {
+  const playAlertSound = async() => {
     return new Promise((resolve) => {
       if (soundEnabled && !alertActive) {
         alertSound.currentTime = 0; // Reset sound to start
@@ -77,11 +77,38 @@ const MapComponent = () => {
       return newState; // Return the new state
     });
   };
+
+  // Custom Control for the Map
+  const CustomControl = () => {
+    const map = useMap();
+
+    useEffect(() => {
+      const control = L.control({ position: 'topright' });
+
+      control.onAdd = () => {
+        const div = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+        div.style.backgroundColor = 'white';
+        div.style.padding = '5px';
+        div.style.cursor = 'pointer';
+        div.innerHTML = soundEnabled ? '🔊 Mute' : '🔇 Unmute';
+        div.onclick = handleUserAction;
+        return div;
+      };
+
+      control.addTo(map);
+
+      return () => {
+        map.removeControl(control); // Clean up when component unmounts
+      };
+    }, [map, soundEnabled]);
+
+    return null;
+  };
   
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`${backendEndpoint}/get-data`, {
+      const response = await fetch(`${backendEndpoint}/getData`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -176,7 +203,7 @@ const MapComponent = () => {
 
   const checkProximity = async (position) => {
     const allZones = [...backendData, ...dummyStressZones];
-    let alertMessage = "";
+    let alertText = "";
     let closestZone = null;
     let closestDistance = Infinity;
   
@@ -192,10 +219,13 @@ const MapComponent = () => {
         if (!lastAlertedZones[zoneKey] || (currentTime - lastAlertedZones[zoneKey]) > 15000) {
           playAlertSound(); // Try playing the sound
 
+          setAlertMessage("");
+
           // Set a timeout to display the alert message after a slight delay
           setTimeout(() => {
-            alertMessage += `You are entering stress zone #${index + 1} at Latitude: ${zone.dumlat || zone.latitude}, Longitude: ${zone.dumlng || zone.longitude}\n`;
-            setAlertMessage(alertMessage);
+            alertText += `You are entering stress zone #${index + 1} at Latitude: ${zone.dumlat || zone.latitude}, Longitude: ${zone.dumlng || zone.longitude}\n`;
+            setAlertMessage(alertText);
+            console.log("New Alert:" , alertMessage)
           }, 100); // Adjust the delay if needed (100ms here)
     
           // Update the last alerted zones with the current time
@@ -209,35 +239,21 @@ const MapComponent = () => {
         closestZone = zone;
       }
     }
-    setAlertMessage(alertMessage);
+
   };
   
 
-  // Alert use Effect
+  // Alert useEffect
   useEffect(() => {
-    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-
     if (alertMessage) {
-      if (isMobile) {
-        alert(alertMessage); // Alert for mobile
-      }
+      alert(alertMessage); // Alert for mobile
       console.log(alertMessage); // Log for desktop
     }
-
-  }, [alertMessage])
-
-  useEffect(() => {
-    console.log('Alert Message:', alertMessage);
-  }, [alertMessage]); // This will log the value whenever it changes
+  }, [alertMessage]);
   
 
   return (
     <div>
-      {/* Button to toggle sound */}
-      <button onClick={handleUserAction}>
-        {soundEnabled ? 'Mute Sound' : 'Unmute Sound'}
-      </button>
-      
       {/* MapContainer with default or user position */}
       <MapContainer center={userPosition || defaultPosition} zoom={16} style={{ height: '100vh', width: '100%' }}>
         {/* OpenStreetMap TileLayer */}
@@ -245,6 +261,9 @@ const MapComponent = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
+
+        {/* Custom Control for Unmute/Mute */}
+        <CustomControl />
   
         {userPosition && <SetViewToUserPosition userPosition={userPosition} />}
   
