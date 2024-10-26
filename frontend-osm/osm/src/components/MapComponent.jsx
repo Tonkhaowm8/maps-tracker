@@ -6,7 +6,6 @@ import googleMapArrow from './svg/googleMapArrow.svg'; // Import the custom arro
 // import soundAudio from './audio/yamate-kudasai.mp3';
 import soundAudio from './audio/family-mart.mp3';
 
-
 // Create a custom icon for the user's position, resembling the Google Maps arrow
 const googleMapsArrowIcon = new L.Icon({
   iconUrl: googleMapArrow,
@@ -250,6 +249,74 @@ const MapComponent = () => {
       console.log(alertMessage); // Log for desktop
     }
   }, [alertMessage]);
+
+  const [stressZoneVisibility, setStressZoneVisibility] = useState({
+    yellow: false,
+    orange: false,
+    red: false,
+  });
+
+  const StressZoneControl = () => {
+    const map = useMap();
+
+    useEffect(() => {
+        const control = L.control({ position: 'topright' });
+
+        control.onAdd = () => {
+            const div = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+            div.style.backgroundColor = 'white'; // Keep background color inline for now
+            div.style.padding = '5px';
+            div.style.cursor = 'pointer';
+
+            // Create a container for the toggle buttons
+            const container = document.createElement('div');
+            container.className = 'stress-zone-container'; // Add a class for custom styling
+
+            // Function to create toggle elements
+            const createToggle = (color, label) => {
+                const zoneDiv = document.createElement('div');
+                zoneDiv.className = 'toggle-label';
+
+                const labelSpan = document.createElement('span');
+                labelSpan.className = `${color}-label`;
+                labelSpan.textContent = label;
+
+                const toggleInput = document.createElement('input');
+                toggleInput.type = 'checkbox';
+                toggleInput.checked = stressZoneVisibility[color]; // Set checked state based on the current visibility
+                toggleInput.onchange = () => {
+                    setStressZoneVisibility((prev) => ({ ...prev, [color]: toggleInput.checked }));
+                };
+
+                const labelContainer = document.createElement('label');
+                labelContainer.className = `switch ${color}`;
+                labelContainer.appendChild(toggleInput);
+                labelContainer.appendChild(document.createElement('span')).className = "slider round"; // Create slider
+
+                zoneDiv.appendChild(labelSpan);
+                zoneDiv.appendChild(labelContainer);
+                container.appendChild(zoneDiv);
+            };
+
+            // Create toggles for each zone
+            createToggle('yellow', 'Yellow Zone');
+            createToggle('orange', 'Orange Zone');
+            createToggle('red', 'Red Zone');
+
+            div.appendChild(container); // Append the rendered container to the div
+            return div;
+        };
+
+        control.addTo(map);
+
+        // Cleanup
+        return () => {
+            map.removeControl(control);
+        };
+    }, [map, stressZoneVisibility]); // Include stressZoneVisibility to update on changes
+
+    return null;
+};
   
 
   return (
@@ -264,6 +331,7 @@ const MapComponent = () => {
 
         {/* Custom Control for Unmute/Mute */}
         <CustomControl />
+        <StressZoneControl />
   
         {userPosition && <SetViewToUserPosition userPosition={userPosition} />}
   
