@@ -4,7 +4,8 @@ import L from 'leaflet';
 import './MapComponent.css';
 import googleMapArrow from './svg/googleMapArrow.svg'; // Import the custom arrow icon for user position
 // import soundAudio from './audio/yamate-kudasai.mp3';
-import soundAudio from './audio/family-mart.mp3';
+import soundAudio from './audio/anta-baka.mp3';
+// import soundAudio from './audio/family-mart.mp3';
 
 // Create a custom icon for the user's position, resembling the Google Maps arrow
 const googleMapsArrowIcon = new L.Icon({
@@ -234,7 +235,7 @@ const MapComponent = () => {
 
           // Set a timeout to display the alert message after a slight delay
           setTimeout(() => {
-            alertText += `You are entering stress zone #${index + 1} at Latitude: ${zone.dumlat || zone.latitude}, Longitude: ${zone.dumlng || zone.longitude}\n`;
+            alertText += `You are entering stress zone #${index + 1} be careful of bumpy path!\n`;
             setAlertMessage(alertText);
             console.log("New Alert:" , alertMessage)
           }, 100); // Adjust the delay if needed (100ms here)
@@ -311,9 +312,9 @@ const MapComponent = () => {
             };
 
             // Create toggles for each zone
-            createToggle('yellow', 'Yellow Zone');
-            createToggle('orange', 'Orange Zone');
-            createToggle('red', 'Red Zone');
+            createToggle('yellow', 'Litte Uncomfortable');
+            createToggle('orange', 'Uncomfortable');
+            createToggle('red', 'Very Uncomfortable');
 
             div.appendChild(container); // Append the rendered container to the div
             return div;
@@ -380,7 +381,7 @@ const MapComponent = () => {
               pathOptions={{ color: 'red', fillColor: 'red', fillOpacity: 0.3 }}
             >
               <Popup>
-                Stress Zone: <br />
+                Stress Zone #{index + 1}: <br />
                 Latitude: {zone.latitude}, Longitude: {zone.longitude}
               </Popup>
             </Circle>
@@ -396,7 +397,7 @@ const MapComponent = () => {
             pathOptions={{ color: 'blue', fillColor: 'blue', fillOpacity: 0.3 }}
           >
             <Popup>
-              Dummy Stress Zone<br />
+              Dummy Stress Zone #{index + 1}:<br />
               Latitude: {zone.dumlat}, Longitude: {zone.dumlng}
             </Popup>
           </Circle>
