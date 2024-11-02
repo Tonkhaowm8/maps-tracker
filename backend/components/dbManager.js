@@ -4,19 +4,14 @@ const mongoose = require("mongoose");
 const mongoURI = "mongodb://localhost:27017/data";
 
 // Function to connect to MongoDB
-const connectDb = async (req, res) => {
-    try {
-        await mongoose.connect(mongoURI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
-        console.log("Connected to MongoDB");
+const connectDb = async () => {
+    await mongoose.connect(mongoURI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    });
+    console.log("Connected to MongoDB");
 
-        return true;
-    } catch (error) {
-        console.error("MongoDB connection error:", error);
-        res.status(500).json({ message: "Database connection error" });
-    }
+    return true;
 };
 
 // Store Data to raw-data DB (bypassing model)
@@ -41,18 +36,26 @@ const storeData = async (dataArray, collectionName ) => {
     }
 };
 
-const getData = async (collectionName, query = {}) => {
+const getData = async (collectionName, query = {}, timeSorted = false) => {
     try {
+
         // Access the collection dynamically using collectionName
         const collection = mongoose.connection.collection(collectionName);
 
-        // Find documents based on the query
-        const data = await collection.find(query).toArray();
+        let data = collection.find(query); // `find` returns a cursor, not a promise
 
-        // Log the retrieved data (optional)
+        // Find and sort documents based on the query
+        if (timeSorted) {
+            data = await data.sort({ time: 1 }).toArray();
+        } else {
+            data = await data.toArray(); // Await here and assign the result to `data`
+        }
+
+        // Log the number of documents found (optional)
         console.log(`Found ${data.length} documents in collection: ${collectionName}`);
 
         return data; // Return the found data
+
     } catch (error) {
         console.error('Error fetching data:', error.message);
         throw error; // Re-throw the error for handling in calling function

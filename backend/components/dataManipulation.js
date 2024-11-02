@@ -68,6 +68,7 @@ const calculateRawData = async (rawData) => {
 
         // Store data into processed-data collection
         const storeDocs = [{
+          "sessionId": data.sessionId,
           "latitude": data.latitude,
           "longitude": data.longitude,
           "time": data.time,

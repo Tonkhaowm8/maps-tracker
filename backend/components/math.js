@@ -14,6 +14,7 @@ function calculateArray(data, mode) {
 }
 
 function rootMeanSquare(data) {
+
   // Check if data is not empty
   if (data.length === 0) return 0;
 

@@ -15,7 +15,7 @@ const retrieve = async (req, res) => {
         const data = await getData("processed-data", query);
 
         // Send a success response
-        res.status(200).json({ message: data});
+        res.status(200).json(data);
 
     } catch (error) {
 
