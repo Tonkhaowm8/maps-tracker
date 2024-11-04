@@ -33,7 +33,7 @@ const MapComponent = () => {
   const [extremelyUncomfortableData, setExtremelyUncomfortableData] = useState([]);
 
   const [userPosition, setUserPosition] = useState(null); // Store user's current location
-  const [backendData, setBackendData] = useState([]); // State for holding data fetched from the backend
+  const [backendData] = useState([]); // State for holding data fetched from the backend
   const [soundEnabled, setSoundEnabled] = useState(false); // Flag to check if sound can be played
   const [lastAlertedZones, setLastAlertedZones] = useState({}); // Track last alerted zones
   const [alertActive, setAlertActive] = useState(false);
@@ -135,8 +135,6 @@ const MapComponent = () => {
 
   // Use the browser's geolocation API to get the user's current location and heading
   useEffect(() => {
-    let previousPosition = null; // Store the last known position for heading calculation
-
     console.log(`Backend Data: ${backendData}`);
 
     if (navigator.geolocation) {
@@ -148,7 +146,6 @@ const MapComponent = () => {
           // Log new position and update the user's position in state
           console.log(`New Position: Latitude ${latitude}, Longitude ${longitude}`);
           setUserPosition(newPosition); // Update user position
-          previousPosition = newPosition; // Store the new position as the previous one
         },
         (error) => {
           console.error('Error fetching user location:', error); // Handle any geolocation errors
@@ -246,6 +243,7 @@ const MapComponent = () => {
     red: false,
   });
 
+  //slider control
   const StressZoneControl = () => {
     const map = useMap();
 
