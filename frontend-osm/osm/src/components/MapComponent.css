@@ -11,10 +11,6 @@ html, body, #root {
     width: 100%;
     
   }
-  
-  .arrow-icon{
-    
-  }
 
   .stress-zone-container {
     display: flex;
@@ -79,6 +75,29 @@ input:checked + .slider {
     transition: .4s;
 }
 
-input:checked + .slider:before {
-    transform: translateX(14px); /* Move the knob on toggle */
+/* Little Uncomfortable (Yellow) */
+.yellow input:checked + .slider {
+    background-color: #ffd35c; /* Yellow color for little uncomfortable */
+}
+
+.yellow input:checked + .slider:before {
+    transform: translateX(14px); /* Move the knob */
+}
+
+/* Uncomfortable (Orange) */
+.orange input:checked + .slider {
+    background-color: orange; /* Orange color for uncomfortable */
+}
+
+.orange input:checked + .slider:before {
+    transform: translateX(14px); /* Move the knob */
+}
+
+/* Extremely Uncomfortable (Red) */
+.red input:checked + .slider {
+    background-color: red; /* Red color for extremely uncomfortable */
+}
+
+.red input:checked + .slider:before {
+    transform: translateX(14px); /* Move the knob */
 }

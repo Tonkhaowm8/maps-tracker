@@ -6,6 +6,8 @@ import googleMapArrow from './svg/googleMapArrow.svg'; // Import the custom arro
 // import soundAudio from './audio/yamate-kudasai.mp3';
 import soundAudio from './audio/anta-baka.mp3';
 // import soundAudio from './audio/family-mart.mp3';
+import { fetchLilUncomfortableData, fetchUncomfortableData, fetchExUncomfortableData } from './api';
+
 
 // Create a custom icon for the user's position, resembling the Google Maps arrow
 const googleMapsArrowIcon = new L.Icon({
@@ -26,6 +28,10 @@ L.Icon.Default.mergeOptions({
 const MapComponent = () => {
   const defaultPosition = [35.6895, 139.6917]; // Default location (Tokyo)
   const backendEndpoint = "https://sunbird-peaceful-mammal.ngrok-free.app/api"; // Backend endpoint for fetching additional data
+  const [littleUncomfortableData, setLittleUncomfortableData] = useState([]);
+  const [uncomfortableData, setUncomfortableData] = useState([]);
+  const [extremelyUncomfortableData, setExtremelyUncomfortableData] = useState([]);
+
   const [userPosition, setUserPosition] = useState(null); // Store user's current location
   const [backendData, setBackendData] = useState([]); // State for holding data fetched from the backend
   const [soundEnabled, setSoundEnabled] = useState(false); // Flag to check if sound can be played
@@ -39,50 +45,29 @@ const MapComponent = () => {
     { dumlat: 35.704419, dumlng: 139.719120, radius: 10 },
     { dumlat: 13.86435311161947, dumlng: 100.66858680626, radius: 10 },
     { dumlat: 35.660877, dumlng: 139.795827, radius: 10 },
-    { dumlat: 35.70344974666288, dumlng: 139.71944070586505, radius: 10 },
+    { dumlat: 35.70343974666288, dumlng: 139.71935010586505, radius: 10 },
   ];
 
-  const fetchData = async () => {
-    try {
-      const payload = {
-        "zVibration": { "$gt": 1.6, "$lte": 2.5 }
-      };
-  
-      const response = await fetch(`${backendEndpoint}/getData`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'ngrok-skip-browser-warning': '69420'
-        },
-        body: JSON.stringify(payload)
-      });
-  
-      if (!response.ok) {
-        throw new Error(`Error: ${response.status}`);
-      }
-  
-      const result = await response.json(); // Parse JSON response
-      console.log("result: ", result);
-  
-      // Ensure that the result is an array before updating the state
-      if (Array.isArray(result)) {
-        setBackendData(result); // Store the fetched data if it's an array
-      } else {
-        console.error("Unexpected data format:", result); // Log if the result isn't an array
-      }
-    } catch (error) {
-      console.error('Error fetching data:', error); // Log any errors during the fetch process
-    }
-  };
-
-
-  // Fetch data from the backend endpoint (only when backendData is null)
+  // Fetch data when the component mounts
   useEffect(() => {
-    // Call the fetch function if backendData hasn't been loaded yet
-    if (backendData.length === 0) {
-      fetchData();
-    }
-  }, [backendData]); // The effect runs when backendData changes
+    const fetchData = async () => {
+      const littleUncomfortable = await fetchLilUncomfortableData(backendEndpoint);
+      const uncomfortable = await fetchUncomfortableData(backendEndpoint);
+      const extremelyUncomfortable = await fetchExUncomfortableData(backendEndpoint);
+      
+      setLittleUncomfortableData(littleUncomfortable);
+      setUncomfortableData(uncomfortable);
+      setExtremelyUncomfortableData(extremelyUncomfortable);
+    };
+
+    fetchData();
+  }, [backendEndpoint]);
+
+  // useEffect(() => {
+  //   console.log("Little", littleUncomfortableData)
+  //   console.log("Uncom", uncomfortableData)
+  //   console.log("Ex", extremelyUncomfortableData)
+  // })
   
   // Load alert sound
   const alertSound = new Audio(soundAudio); // Load the audio file
@@ -132,7 +117,7 @@ const MapComponent = () => {
         div.style.backgroundColor = 'white';
         div.style.padding = '5px';
         div.style.cursor = 'pointer';
-        div.innerHTML = soundEnabled ? '🔊 Mute' : '🔇 Unmute';
+        div.innerHTML = soundEnabled ? '🔇 Mute' : '🔊 Unmute';
         div.onclick = handleUserAction;
         return div;
       };
@@ -216,8 +201,6 @@ const MapComponent = () => {
   const checkProximity = async (position) => {
     const allZones = [...backendData, ...dummyStressZones];
     let alertText = "";
-    let closestZone = null;
-    let closestDistance = Infinity;
   
     for (const [index, zone] of allZones.entries()) {
       const distance = getDistance(position, [zone.dumlat || zone.latitude, zone.dumlng || zone.longitude]);
@@ -243,12 +226,6 @@ const MapComponent = () => {
           // Update the last alerted zones with the current time
           setLastAlertedZones((prev) => ({ ...prev, [zoneKey]: currentTime }));
         }
-  
-        closestZone = zone;
-        closestDistance = distance;
-      } else if (distance < closestDistance) {
-        closestDistance = distance;
-        closestZone = zone;
       }
     }
 
@@ -370,23 +347,50 @@ const MapComponent = () => {
           </Marker>
         )}
   
-        {/* Render stress zones from backendData */}
-        {backendData.map((zone, index) => {
-          const radius = zone.radius || 10;
-          return (
-            <Circle
-              key={index}
-              center={[zone.latitude, zone.longitude]}
-              radius={radius}
-              pathOptions={{ color: 'red', fillColor: 'red', fillOpacity: 0.3 }}
-            >
-              <Popup>
-                Stress Zone #{index + 1}: <br />
-                Latitude: {zone.latitude}, Longitude: {zone.longitude}
-              </Popup>
-            </Circle>
-          );
-        })}
+        {/* Render little uncomfortable zones (yellow) */}
+        {stressZoneVisibility.yellow && littleUncomfortableData.map((zone, index) => (
+          <Circle
+            key={`little-${index}`}
+            center={[zone.latitude, zone.longitude]}
+            radius={zone.radius || 10}
+            pathOptions={{ color: 'yellow', fillColor: 'yellow', fillOpacity: 0.3 }}
+          >
+            <Popup>
+              Little Uncomfortable Zone #{index + 1}: <br />
+              Latitude: {zone.latitude}, Longitude: {zone.longitude}
+            </Popup>
+          </Circle>
+        ))}
+
+        {/* Render uncomfortable zones (orange) */}
+        {stressZoneVisibility.orange && uncomfortableData.map((zone, index) => (
+          <Circle
+            key={`uncomfortable-${index}`}
+            center={[zone.latitude, zone.longitude]}
+            radius={zone.radius || 10}
+            pathOptions={{ color: 'orange', fillColor: 'orange', fillOpacity: 0.3 }}
+          >
+            <Popup>
+              Uncomfortable Zone #{index + 1}: <br />
+              Latitude: {zone.latitude}, Longitude: {zone.longitude}
+            </Popup>
+          </Circle>
+        ))}
+
+        {/* Render extremely uncomfortable zones (red) */}
+        {stressZoneVisibility.red && extremelyUncomfortableData.map((zone, index) => (
+          <Circle
+            key={`extremely-${index}`}
+            center={[zone.latitude, zone.longitude]}
+            radius={zone.radius || 10}
+            pathOptions={{ color: 'red', fillColor: 'red', fillOpacity: 0.3 }}
+          >
+            <Popup>
+              Extremely Uncomfortable Zone #{index + 1}: <br />
+              Latitude: {zone.latitude}, Longitude: {zone.longitude}
+            </Popup>
+          </Circle>
+        ))}
   
         {/* Render dummy stress zones */}
         {dummyStressZones.map((zone, index) => (
