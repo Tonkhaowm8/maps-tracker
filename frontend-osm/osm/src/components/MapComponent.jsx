@@ -58,6 +58,8 @@ const MapComponent = () => {
       setLittleUncomfortableData(littleUncomfortable);
       setUncomfortableData(uncomfortable);
       setExtremelyUncomfortableData(extremelyUncomfortable);
+
+      
     };
 
     fetchData();
@@ -163,20 +165,23 @@ const MapComponent = () => {
     }
   }, []); // This effect only runs once when the component is mounted
 
-
+  // The Haversine formula is used to calculate the shortest distance between two points on a sphere
   // Function to calculate distance between two coordinates using Haversine formula
   const getDistance = (pos1, pos2) => {
     const R = 6371e3; // Radius of the Earth in meters
-    const lat1 = pos1[0] * Math.PI / 180;
+    const lat1 = pos1[0] * Math.PI / 180;   //convert degrees to radians
     const lat2 = pos2[0] * Math.PI / 180;
-    const deltaLat = (pos2[0] - pos1[0]) * Math.PI / 180;
+    const deltaLat = (pos2[0] - pos1[0]) * Math.PI / 180; // Difference of lat and lon be between 2 points
     const deltaLng = (pos2[1] - pos1[1]) * Math.PI / 180;
 
+    // Haversine formula
     const a = Math.sin(deltaLat / 2) * Math.sin(deltaLat / 2) +
               Math.cos(lat1) * Math.cos(lat2) *
               Math.sin(deltaLng / 2) * Math.sin(deltaLng / 2);
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
+    // a: It computes a value based on the sine of half the latitude and longitude differences and the cosine of both latitudes.
+    // c: This value represents the angular distance in radians between the two points.
     return R * c; // Distance in meters
   };
 
@@ -196,7 +201,7 @@ const MapComponent = () => {
   };
 
   const checkProximity = async (position) => {
-    const allZones = [...backendData, ...dummyStressZones];
+    const allZones = [...extremelyUncomfortableData,...uncomfortableData,...littleUncomfortableData];
     let alertText = "";
   
     for (const [index, zone] of allZones.entries()) {
@@ -391,7 +396,7 @@ const MapComponent = () => {
         ))}
   
         {/* Render dummy stress zones */}
-        {dummyStressZones.map((zone, index) => (
+        {/* {dummyStressZones.map((zone, index) => (
           <Circle
             key={index}
             center={[zone.dumlat, zone.dumlng]}
@@ -403,7 +408,7 @@ const MapComponent = () => {
               Latitude: {zone.dumlat}, Longitude: {zone.dumlng}
             </Popup>
           </Circle>
-        ))}
+        ))} */}
       </MapContainer> 
     </div>
   );
