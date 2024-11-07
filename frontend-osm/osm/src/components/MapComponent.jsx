@@ -27,7 +27,7 @@ L.Icon.Default.mergeOptions({
 
 const MapComponent = () => {
   const defaultPosition = [35.6895, 139.6917]; // Default location (Tokyo)
-  const backendEndpoint = "https://sunbird-peaceful-mammal.ngrok-free.app/api"; // Backend endpoint for fetching additional data
+  const backendEndpoint = "/api"; // Backend endpoint for fetching additional data
   const [littleUncomfortableData, setLittleUncomfortableData] = useState([]);
   const [uncomfortableData, setUncomfortableData] = useState([]);
   const [extremelyUncomfortableData, setExtremelyUncomfortableData] = useState([]);

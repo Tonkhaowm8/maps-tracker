@@ -4,7 +4,7 @@ export const fetchBackendData = async (backendEndpoint, zVibrationRange) => {
       zVibration: zVibrationRange
     };
 
-    const response = await fetch(`${backendEndpoint}/getData`, {
+    const response = await fetch(`/api/getData`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
