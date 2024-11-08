@@ -1,0 +1,3652 @@
+[{
+  "_id": {
+    "$oid": "6726452c38c993bfc571e6be"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.660493365802616,
+  "longitude": 139.7966038264744,
+  "time": 1729476332140123,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e6c6"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.660493365802616,
+  "longitude": 139.7966038264744,
+  "time": 1729476333617800,
+  "zVibration": 0,
+  "microphone": -30.437889099121094
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e6c9"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.660196741380815,
+  "longitude": 139.79714643897125,
+  "time": 1729476682369913,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e6d3"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.65953972265154,
+  "longitude": 139.7972542172085,
+  "time": 1729476617877128,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e6d6"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.660196741380815,
+  "longitude": 139.79714643897125,
+  "time": 1729476686322135,
+  "zVibration": 0.05413965953178704,
+  "microphone": -17.067180633544922
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e6d8"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66052013640116,
+  "longitude": 139.79667652242858,
+  "time": 1729476336896529,
+  "zVibration": 0.2031687939259547,
+  "microphone": -20.688894916983212
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e6e6"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.660593979350885,
+  "longitude": 139.79678983317655,
+  "time": 1729476749999399,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e6e8"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.65953972265154,
+  "longitude": 139.7972542172085,
+  "time": 1729476628997898,
+  "zVibration": 0,
+  "microphone": -28.637521743774414
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e6ee"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66051304797687,
+  "longitude": 139.79665427475638,
+  "time": 1729476337896517,
+  "zVibration": 0.2728840253639931,
+  "microphone": -20.11408825807793
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e6f3"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66013510720637,
+  "longitude": 139.79698419617458,
+  "time": 1729476689589361,
+  "zVibration": 0.40257720886128445,
+  "microphone": -11.20950686230379
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e6f6"
+  },
+  "sessionId": "surface 5",
+  "latitude": 35.65987910340856,
+  "longitude": 139.79544504606457,
+  "time": 1729477184516445,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e700"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.660593979350885,
+  "longitude": 139.79678983317655,
+  "time": 1729476758535777,
+  "zVibration": 0.024624756435025482,
+  "microphone": -25.10961627960205
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e707"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.65958363597873,
+  "longitude": 139.79705997515748,
+  "time": 1729476631501524,
+  "zVibration": 0.29708515816792325,
+  "microphone": -24.076405451847958
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e70d"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66054531983253,
+  "longitude": 139.79668245056052,
+  "time": 1729476425320385,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e710"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.660502403219155,
+  "longitude": 139.7966563381195,
+  "time": 1729476338896504,
+  "zVibration": 0.2989953915367723,
+  "microphone": -19.929429558088195
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e715"
+  },
+  "sessionId": "surface 5",
+  "latitude": 35.66012500614287,
+  "longitude": 139.7951670717532,
+  "time": 1729477190099129,
+  "zVibration": 0.7078756075129737,
+  "microphone": -31.64111328125
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e717"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66010850276293,
+  "longitude": 139.79707756495685,
+  "time": 1729476690589342,
+  "zVibration": 0.6440578940537142,
+  "microphone": -10.39904409646988
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e71f"
+  },
+  "sessionId": "surface 7",
+  "latitude": 35.66001419470777,
+  "longitude": 139.79504361242832,
+  "time": 1729477158711878,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "6726452d38c993bfc571e726"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66048412221059,
+  "longitude": 139.79677279415583,
+  "time": 1729476761381450,
+  "zVibration": 0.4385123818332234,
+  "microphone": -19.884255091349285
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e72c"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.659907089565436,
+  "longitude": 139.79728740469463,
+  "time": 1729476633264384,
+  "zVibration": 1.319122518902905,
+  "microphone": -21.953146890152333
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e735"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.66062965293767,
+  "longitude": 139.79497476417245,
+  "time": 1729477315251799,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e738"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66054531983253,
+  "longitude": 139.79668245056052,
+  "time": 1729476465882527,
+  "zVibration": 0.02320785710811615,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e73d"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.660458839789364,
+  "longitude": 139.79670301138552,
+  "time": 1729476340010491,
+  "zVibration": 0.3080592937761211,
+  "microphone": -19.515731260180473
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e73f"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.660076813536634,
+  "longitude": 139.79703920379146,
+  "time": 1729476691589322,
+  "zVibration": 0.7823235794356841,
+  "microphone": -10.853225041318822
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e743"
+  },
+  "sessionId": "surface 5",
+  "latitude": 35.660093290535286,
+  "longitude": 139.79519156733946,
+  "time": 1729477191361486,
+  "zVibration": 0.3490649330414725,
+  "microphone": -25.974268436431885
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e74c"
+  },
+  "sessionId": "surface 7",
+  "latitude": 35.65957403621803,
+  "longitude": 139.79488576255434,
+  "time": 1729477163366436,
+  "zVibration": 0.16311781104709952,
+  "microphone": -31.02659034729004
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e753"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.660552633558446,
+  "longitude": 139.7968412891795,
+  "time": 1729476762808451,
+  "zVibration": 0.9145355301808075,
+  "microphone": -18.26105657490817
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e755"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66051034863527,
+  "longitude": 139.79497958526935,
+  "time": 1729477435524775,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e75f"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.659914890119055,
+  "longitude": 139.797300352901,
+  "time": 1729476634264360,
+  "zVibration": 1.498403037230225,
+  "microphone": -20.75987520757711
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e767"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.66050633979125,
+  "longitude": 139.79490212080006,
+  "time": 1729477330699113,
+  "zVibration": 0,
+  "microphone": -32.115108489990234
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e769"
+  },
+  "sessionId": "surface 10",
+  "latitude": 35.66062443007765,
+  "longitude": 139.79472609731215,
+  "time": 1729477500900550,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e76c"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66053493905914,
+  "longitude": 139.7964588582105,
+  "time": 1729476467714145,
+  "zVibration": 0.05506518911239794,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e771"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66007634140721,
+  "longitude": 139.79703822166127,
+  "time": 1729476692589303,
+  "zVibration": 1.2733609487746698,
+  "microphone": -10.482106808573008
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e774"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66045355988727,
+  "longitude": 139.796721384498,
+  "time": 1729476341010478,
+  "zVibration": 0.2929444306523379,
+  "microphone": -19.577804913391937
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e779"
+  },
+  "sessionId": "surface 5",
+  "latitude": 35.6598885046817,
+  "longitude": 139.79550788308498,
+  "time": 1729477193372250,
+  "zVibration": 0.9167925460652734,
+  "microphone": -21.599929058190547
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e781"
+  },
+  "sessionId": "surface 7",
+  "latitude": 35.66037615910913,
+  "longitude": 139.79478730033463,
+  "time": 1729477166458297,
+  "zVibration": 0.5835052670505726,
+  "microphone": -27.9662064909935
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e787"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.6612619769766,
+  "longitude": 139.79464227724947,
+  "time": 1729477644830765,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e78a"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66051034863527,
+  "longitude": 139.79497958526935,
+  "time": 1729477449354540,
+  "zVibration": 0,
+  "microphone": -31.88790512084961
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e78e"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66055442766178,
+  "longitude": 139.79683344579732,
+  "time": 1729476763808433,
+  "zVibration": 1.2446074652049437,
+  "microphone": -17.790195447094035
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e797"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.6599086126784,
+  "longitude": 139.79730047840889,
+  "time": 1729476635264341,
+  "zVibration": 1.6801460728227045,
+  "microphone": -20.825261524745397
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e79e"
+  },
+  "sessionId": "surface 10",
+  "latitude": 35.66054420863363,
+  "longitude": 139.7945405574143,
+  "time": 1729477515840568,
+  "zVibration": 0,
+  "microphone": -26.29296112060547
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e7a1"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.66047446279822,
+  "longitude": 139.7949024899398,
+  "time": 1729477331747937,
+  "zVibration": 0.09115593978281698,
+  "microphone": -26.111687501271565
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e7a5"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66049947690013,
+  "longitude": 139.79644209249105,
+  "time": 1729476468981998,
+  "zVibration": 0.05791856735037405,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e7aa"
+  },
+  "sessionId": "surface 5",
+  "latitude": 35.65991659180315,
+  "longitude": 139.79549743023557,
+  "time": 1729477194372231,
+  "zVibration": 1.1164782239245936,
+  "microphone": -20.098714872848156
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e7ad"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66046094279365,
+  "longitude": 139.79672587960584,
+  "time": 1729476342010466,
+  "zVibration": 0.2809736596337233,
+  "microphone": -19.453877035393774
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e7b0"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66016579027483,
+  "longitude": 139.7970670743319,
+  "time": 1729476693999277,
+  "zVibration": 1.5921441501097007,
+  "microphone": -10.376130198821043
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e7b7"
+  },
+  "sessionId": "surface 7",
+  "latitude": 35.65981812400608,
+  "longitude": 139.79547043980298,
+  "time": 1729477167634583,
+  "zVibration": 1.462546391963589,
+  "microphone": -27.458470765934432
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e7bc"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.6612619769766,
+  "longitude": 139.79464227724947,
+  "time": 1729477646153169,
+  "zVibration": 0.26547347568273544,
+  "microphone": -12.991020202636719
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e7c2"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.660557237945014,
+  "longitude": 139.79493686153478,
+  "time": 1729477450617319,
+  "zVibration": 0.14671869004436605,
+  "microphone": -28.385705130440847
+},
+{
+  "_id": {
+    "$oid": "6726452e38c993bfc571e7c4"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66054348629508,
+  "longitude": 139.7968062786884,
+  "time": 1729476764999438,
+  "zVibration": 1.4947629470181707,
+  "microphone": -17.36980416224553
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e7ce"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.659933793205475,
+  "longitude": 139.79733581554538,
+  "time": 1729476636997308,
+  "zVibration": 1.656634987772036,
+  "microphone": -20.666483414173126
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e7d4"
+  },
+  "sessionId": "surface 10",
+  "latitude": 35.660821102897984,
+  "longitude": 139.7943922817095,
+  "time": 1729477518492059,
+  "zVibration": 0.896717777292875,
+  "microphone": -21.249035022876882
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e7d6"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.66027016285814,
+  "longitude": 139.79494103050357,
+  "time": 1729477333962717,
+  "zVibration": 0.304705735663677,
+  "microphone": -23.1823436274673
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e7dc"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66053233775023,
+  "longitude": 139.79662256466472,
+  "time": 1729476470152352,
+  "zVibration": 0.09667679110549833,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e7e1"
+  },
+  "sessionId": "surface 5",
+  "latitude": 35.659926636912964,
+  "longitude": 139.7954922100416,
+  "time": 1729477195372205,
+  "zVibration": 1.2199005403933152,
+  "microphone": -20.116024549190815
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e7e5"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66019964889735,
+  "longitude": 139.7970699792755,
+  "time": 1729476694999258,
+  "zVibration": 1.7778748512788975,
+  "microphone": -10.168459785395655
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e7e7"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66048874151161,
+  "longitude": 139.79672937204964,
+  "time": 1729476343010629,
+  "zVibration": 0.27760507984565996,
+  "microphone": -19.07002579268589
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e7ed"
+  },
+  "sessionId": "surface 7",
+  "latitude": 35.659806809329105,
+  "longitude": 139.7954557845936,
+  "time": 1729477168634563,
+  "zVibration": 1.5602475200831445,
+  "microphone": -26.376935347071235
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e7f2"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.66126074150128,
+  "longitude": 139.79466547721776,
+  "time": 1729477648856793,
+  "zVibration": 0.5100572839462296,
+  "microphone": -7.743912943771908
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e7f9"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66053701479823,
+  "longitude": 139.7968081802572,
+  "time": 1729476765999415,
+  "zVibration": 2.1215785095562905,
+  "microphone": -17.081487236022948
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e7fb"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66079828601664,
+  "longitude": 139.79458780863413,
+  "time": 1729477452631377,
+  "zVibration": 0.43852098894972086,
+  "microphone": -26.98798179626465
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e805"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.65993953271862,
+  "longitude": 139.79734273804186,
+  "time": 1729476637997289,
+  "zVibration": 1.589422876751235,
+  "microphone": -20.546538893381754
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e80b"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.660255545325825,
+  "longitude": 139.79493537429832,
+  "time": 1729477334962698,
+  "zVibration": 0.5424350170553398,
+  "microphone": -21.782039664512457
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e810"
+  },
+  "sessionId": "surface 10",
+  "latitude": 35.6607033083017,
+  "longitude": 139.7944596442668,
+  "time": 1729477520110850,
+  "zVibration": 1.328777043030413,
+  "microphone": -20.771469471066496
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e814"
+  },
+  "sessionId": "surface 5",
+  "latitude": 35.65994168248929,
+  "longitude": 139.7954783998494,
+  "time": 1729477196372186,
+  "zVibration": 1.392303232156992,
+  "microphone": -19.49945202181416
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e817"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66053380375012,
+  "longitude": 139.7966306159533,
+  "time": 1729476471152334,
+  "zVibration": 0.08764595670655859,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e81d"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.660217095238444,
+  "longitude": 139.79706844050824,
+  "time": 1729476696000158,
+  "zVibration": 1.8386137915464154,
+  "microphone": -9.879201390079617
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e821"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66050446988426,
+  "longitude": 139.7967264166263,
+  "time": 1729476344010649,
+  "zVibration": 0.28960837999252576,
+  "microphone": -18.97242761815636
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e825"
+  },
+  "sessionId": "surface 7",
+  "latitude": 35.6598374359593,
+  "longitude": 139.7954648196747,
+  "time": 1729477169634544,
+  "zVibration": 1.626687006735429,
+  "microphone": -25.88737624032157
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e828"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.66123152235577,
+  "longitude": 139.7948003866656,
+  "time": 1729477650428007,
+  "zVibration": 0.9286840305842128,
+  "microphone": -7.445763349533081
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e82d"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66053498956763,
+  "longitude": 139.79682281639708,
+  "time": 1729476766999394,
+  "zVibration": 2.196033046784266,
+  "microphone": -16.922640641530354
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e831"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.660556555383515,
+  "longitude": 139.79449462817942,
+  "time": 1729477453631352,
+  "zVibration": 0.3879483759091155,
+  "microphone": -26.549820789071017
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e83c"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.659945050030416,
+  "longitude": 139.79735052507692,
+  "time": 1729476639000358,
+  "zVibration": 1.5341621250861837,
+  "microphone": -20.639995412826536
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e841"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.66024059433736,
+  "longitude": 139.79492648635477,
+  "time": 1729477335998678,
+  "zVibration": 0.5874296526934979,
+  "microphone": -22.07949286920053
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e848"
+  },
+  "sessionId": "surface 10",
+  "latitude": 35.66068930715601,
+  "longitude": 139.79447506888602,
+  "time": 1729477521110830,
+  "zVibration": 1.487978455705873,
+  "microphone": -20.39275446477926
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e84b"
+  },
+  "sessionId": "surface 5",
+  "latitude": 35.659954368038726,
+  "longitude": 139.7954390835254,
+  "time": 1729477197997161,
+  "zVibration": 1.3489911842022555,
+  "microphone": -18.289497069823437
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e84e"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.660535366950086,
+  "longitude": 139.79663920106577,
+  "time": 1729476472997300,
+  "zVibration": 0.07669725712835139,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e852"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66023132229586,
+  "longitude": 139.79706616633138,
+  "time": 1729476697000169,
+  "zVibration": 1.898167096077726,
+  "microphone": -9.99957378111153
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e858"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.660518609852055,
+  "longitude": 139.7967266529302,
+  "time": 1729476345010636,
+  "zVibration": 0.2880036459761325,
+  "microphone": -19.08337961775916
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e85a"
+  },
+  "sessionId": "surface 7",
+  "latitude": 35.659864152896304,
+  "longitude": 139.79547873135735,
+  "time": 1729477170634525,
+  "zVibration": 1.6513711250111023,
+  "microphone": -25.536000596152412
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e85c"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.66118108048217,
+  "longitude": 139.7948821867719,
+  "time": 1729477651427985,
+  "zVibration": 1.360982595058706,
+  "microphone": -7.827823553445204
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e866"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66053061346803,
+  "longitude": 139.79682826073102,
+  "time": 1729476767999565,
+  "zVibration": 2.226382371955409,
+  "microphone": -16.791263570176795
+},
+{
+  "_id": {
+    "$oid": "6726452f38c993bfc571e86a"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.660516076201915,
+  "longitude": 139.79450453174027,
+  "time": 1729477454631333,
+  "zVibration": 0.4458381928685507,
+  "microphone": -26.196951668217498
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e874"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.65995050956941,
+  "longitude": 139.7973536410775,
+  "time": 1729476640000340,
+  "zVibration": 1.4917150754919652,
+  "microphone": -20.453756791895085
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e87a"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.66022238286931,
+  "longitude": 139.79495848729232,
+  "time": 1729477336998660,
+  "zVibration": 0.6586848767525086,
+  "microphone": -21.30599582006061
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e87f"
+  },
+  "sessionId": "surface 5",
+  "latitude": 35.659960531111174,
+  "longitude": 139.79542838411447,
+  "time": 1729477199000132,
+  "zVibration": 1.3164899737284421,
+  "microphone": -18.314687132835388
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e882"
+  },
+  "sessionId": "surface 10",
+  "latitude": 35.66069861950476,
+  "longitude": 139.79448882765584,
+  "time": 1729477522998795,
+  "zVibration": 1.4860379333452558,
+  "microphone": -20.0438867410024
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e885"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66053576554074,
+  "longitude": 139.7966413901304,
+  "time": 1729476473997281,
+  "zVibration": 0.07243503164929102,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e889"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.660243308668946,
+  "longitude": 139.7970638546433,
+  "time": 1729476698000151,
+  "zVibration": 1.9478170327127813,
+  "microphone": -9.99968403017419
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e88d"
+  },
+  "sessionId": "surface 7",
+  "latitude": 35.65985885305847,
+  "longitude": 139.79548987459918,
+  "time": 1729477171997499,
+  "zVibration": 1.8651473894632253,
+  "microphone": -25.307736086290937
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e892"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.66116496945399,
+  "longitude": 139.79487901055273,
+  "time": 1729477652427966,
+  "zVibration": 1.6458110367139138,
+  "microphone": -9.02184922733004
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e897"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66053304380825,
+  "longitude": 139.7967220520393,
+  "time": 1729476346010659,
+  "zVibration": 0.2845040540780256,
+  "microphone": -19.09779191408001
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e89b"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.660524612993385,
+  "longitude": 139.7968349043775,
+  "time": 1729476768999578,
+  "zVibration": 2.323540445681756,
+  "microphone": -16.70492270359626
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8a1"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66049108438208,
+  "longitude": 139.7945322609012,
+  "time": 1729477455997308,
+  "zVibration": 0.8470633458837222,
+  "microphone": -25.652778938635073
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8ab"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.659956424550835,
+  "longitude": 139.79735441851835,
+  "time": 1729476641000345,
+  "zVibration": 1.4908027841199873,
+  "microphone": -20.266388765970866
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8b1"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.660224217761076,
+  "longitude": 139.79497324749187,
+  "time": 1729477337998641,
+  "zVibration": 0.8321008664285673,
+  "microphone": -19.515202600662022
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8b5"
+  },
+  "sessionId": "surface 5",
+  "latitude": 35.6599787711791,
+  "longitude": 139.79542187551118,
+  "time": 1729477200000149,
+  "zVibration": 1.2817602587769248,
+  "microphone": -18.57446079647418
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8b8"
+  },
+  "sessionId": "surface 10",
+  "latitude": 35.660755941784444,
+  "longitude": 139.79443643932547,
+  "time": 1729477523998776,
+  "zVibration": 1.4921587243769807,
+  "microphone": -19.725486383205507
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8bc"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66053544540195,
+  "longitude": 139.7966370147713,
+  "time": 1729476474999566,
+  "zVibration": 0.06859792006792381,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8c1"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66025016647081,
+  "longitude": 139.79705596216755,
+  "time": 1729476699000164,
+  "zVibration": 2.022210187959805,
+  "microphone": -9.834740317712619
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8c6"
+  },
+  "sessionId": "surface 7",
+  "latitude": 35.65986532166332,
+  "longitude": 139.7954752462166,
+  "time": 1729477172997480,
+  "zVibration": 1.9231415616676037,
+  "microphone": -25.07823399702708
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8c8"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.66116572109084,
+  "longitude": 139.7948445019728,
+  "time": 1729477653997936,
+  "zVibration": 2.0199817061145344,
+  "microphone": -11.402983558483612
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8ce"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.660536360523245,
+  "longitude": 139.79671957982322,
+  "time": 1729476347010678,
+  "zVibration": 0.2775789331413133,
+  "microphone": -18.56762444972992
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8d2"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66051823011282,
+  "longitude": 139.79683948457586,
+  "time": 1729476769999560,
+  "zVibration": 2.3738072748923362,
+  "microphone": -16.56001302652192
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8d8"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66048049332694,
+  "longitude": 139.79455299974802,
+  "time": 1729477456997289,
+  "zVibration": 1.3292289532069548,
+  "microphone": -25.274558293192012
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8e3"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.65996199628484,
+  "longitude": 139.79734989893424,
+  "time": 1729476642000353,
+  "zVibration": 1.7988313195176122,
+  "microphone": -19.912642765045167
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8e6"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.66022719067703,
+  "longitude": 139.79498168808067,
+  "time": 1729477338998622,
+  "zVibration": 0.8691105215740316,
+  "microphone": -18.895610131413104
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8ec"
+  },
+  "sessionId": "surface 5",
+  "latitude": 35.65997903621033,
+  "longitude": 139.79540497773277,
+  "time": 1729477201000136,
+  "zVibration": 1.267817730720007,
+  "microphone": -18.50787156541771
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8ef"
+  },
+  "sessionId": "surface 10",
+  "latitude": 35.66077729822503,
+  "longitude": 139.79441520203645,
+  "time": 1729477524999862,
+  "zVibration": 1.4862821233111723,
+  "microphone": -19.441332433534704
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8f3"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.660255024315404,
+  "longitude": 139.7970488723626,
+  "time": 1729476700000175,
+  "zVibration": 2.06931104758283,
+  "microphone": -9.659071412399738
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8f5"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66053592742071,
+  "longitude": 139.7966402169445,
+  "time": 1729476475999579,
+  "zVibration": 0.0654312285204126,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e8fc"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.66116309417105,
+  "longitude": 139.7948288794091,
+  "time": 1729477654997918,
+  "zVibration": 2.1986274424207646,
+  "microphone": -12.412635805931957
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e900"
+  },
+  "sessionId": "surface 7",
+  "latitude": 35.65986927654513,
+  "longitude": 139.795457803156,
+  "time": 1729477173997461,
+  "zVibration": 1.9536962054276548,
+  "microphone": -24.97073280697777
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e903"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.660538606026584,
+  "longitude": 139.79671976312773,
+  "time": 1729476348010668,
+  "zVibration": 0.2764045160980167,
+  "microphone": -18.107013232271438
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e909"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66051105800705,
+  "longitude": 139.79684450163046,
+  "time": 1729476770999574,
+  "zVibration": 2.4610105466604395,
+  "microphone": -16.47380962679463
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e90e"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66048154291149,
+  "longitude": 139.794567171188,
+  "time": 1729477457997270,
+  "zVibration": 1.4462963320083986,
+  "microphone": -24.974431570186173
+},
+{
+  "_id": {
+    "$oid": "6726453038c993bfc571e917"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.660226883818844,
+  "longitude": 139.7949865336831,
+  "time": 1729477340000160,
+  "zVibration": 0.9663771230423877,
+  "microphone": -18.15088281323833
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e91d"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.65996692324676,
+  "longitude": 139.7973456092279,
+  "time": 1729476643000328,
+  "zVibration": 2.0400254000922193,
+  "microphone": -19.391487200483144
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e923"
+  },
+  "sessionId": "surface 10",
+  "latitude": 35.66079032443723,
+  "longitude": 139.7943998747999,
+  "time": 1729477525999873,
+  "zVibration": 1.4978158201901888,
+  "microphone": -19.338425720439236
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e926"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.660260976467434,
+  "longitude": 139.79704026955895,
+  "time": 1729476701000154,
+  "zVibration": 2.1514952499119757,
+  "microphone": -9.883147108311556
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e92a"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66053619868604,
+  "longitude": 139.79664201902898,
+  "time": 1729476476999560,
+  "zVibration": 0.06252992960958739,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e92f"
+  },
+  "sessionId": "surface 7",
+  "latitude": 35.65987767797086,
+  "longitude": 139.79544358432238,
+  "time": 1729477174997441,
+  "zVibration": 1.9177346243877653,
+  "microphone": -24.55377880594005
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e931"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.66116371431819,
+  "longitude": 139.79481391589607,
+  "time": 1729477656000465,
+  "zVibration": 2.4641202631818104,
+  "microphone": -12.115756056746658
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e935"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66053678743249,
+  "longitude": 139.79672080043218,
+  "time": 1729476349010098,
+  "zVibration": 0.27032458429998557,
+  "microphone": -18.04356130385241
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e93a"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66050601084069,
+  "longitude": 139.79684738744098,
+  "time": 1729476771999588,
+  "zVibration": 2.4429191158891914,
+  "microphone": -16.428610436002113
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e93f"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66048517749293,
+  "longitude": 139.79457855758082,
+  "time": 1729477458999601,
+  "zVibration": 1.5763145665833584,
+  "microphone": -24.662905752658844
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e947"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.66022557481646,
+  "longitude": 139.79498902978648,
+  "time": 1729477341000174,
+  "zVibration": 0.9998541316592132,
+  "microphone": -17.957071109882836
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e950"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.6599750865435,
+  "longitude": 139.7973405129206,
+  "time": 1729476644000343,
+  "zVibration": 2.0814953764278106,
+  "microphone": -19.008084261977434
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e955"
+  },
+  "sessionId": "surface 10",
+  "latitude": 35.66080063152099,
+  "longitude": 139.79438448960695,
+  "time": 1729477526999855,
+  "zVibration": 1.5581752280054786,
+  "microphone": -19.318774896008627
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e959"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.66116262394031,
+  "longitude": 139.79479780125556,
+  "time": 1729477657000477,
+  "zVibration": 3.579446951025911,
+  "microphone": -11.724920762909782
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e95b"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66026830404168,
+  "longitude": 139.7970318085994,
+  "time": 1729476702000163,
+  "zVibration": 2.1890152480335754,
+  "microphone": -10.289196863295926
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e95e"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66053642287156,
+  "longitude": 139.79664350835037,
+  "time": 1729476477999571,
+  "zVibration": 0.06043277082002151,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e962"
+  },
+  "sessionId": "surface 7",
+  "latitude": 35.65988149819236,
+  "longitude": 139.79543892336284,
+  "time": 1729477175997423,
+  "zVibration": 1.8591420160362775,
+  "microphone": -24.112990348815917
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e967"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66053524473568,
+  "longitude": 139.7967221823466,
+  "time": 1729476350009554,
+  "zVibration": 0.26440364415455486,
+  "microphone": -17.830060461293098
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e96b"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.6604981417651,
+  "longitude": 139.79685308826186,
+  "time": 1729476772999574,
+  "zVibration": 2.464709305157152,
+  "microphone": -16.3506403836337
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e972"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66049328249429,
+  "longitude": 139.79458712225656,
+  "time": 1729477459999613,
+  "zVibration": 1.671816540593911,
+  "microphone": -24.364266269611864
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e979"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.66022756496947,
+  "longitude": 139.7949925324414,
+  "time": 1729477342000155,
+  "zVibration": 1.02518299028318,
+  "microphone": -17.94355340130561
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e982"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.65998237228736,
+  "longitude": 139.7973405129206,
+  "time": 1729476645000358,
+  "zVibration": 2.0445604188911504,
+  "microphone": -18.68345482844227
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e989"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.6611597771062,
+  "longitude": 139.79478464444364,
+  "time": 1729477658000458,
+  "zVibration": 3.4999902826257605,
+  "microphone": -11.518710046751886
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e98c"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.660269445578415,
+  "longitude": 139.7970227346985,
+  "time": 1729476703000172,
+  "zVibration": 2.2099165588703404,
+  "microphone": -10.654001148874888
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e98f"
+  },
+  "sessionId": "surface 10",
+  "latitude": 35.660812736329625,
+  "longitude": 139.79437012684076,
+  "time": 1729477527999869,
+  "zVibration": 1.6483040950689916,
+  "microphone": -19.26098918914795
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e992"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66053654782556,
+  "longitude": 139.79664433845159,
+  "time": 1729476478999581,
+  "zVibration": 0.05819442132141002,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e995"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.660535242035095,
+  "longitude": 139.79672218198007,
+  "time": 1729476351008984,
+  "zVibration": 0.2617545874044413,
+  "microphone": -17.278959903103566
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e999"
+  },
+  "sessionId": "surface 7",
+  "latitude": 35.65987910340856,
+  "longitude": 139.79544504606457,
+  "time": 1729477176997404,
+  "zVibration": 1.7927322867381081,
+  "microphone": -23.96883145791513
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e99c"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.660491683899345,
+  "longitude": 139.7968609466915,
+  "time": 1729476773999589,
+  "zVibration": 2.488984221604922,
+  "microphone": -16.319418607973585
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e9a1"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.660502711537525,
+  "longitude": 139.7945944644882,
+  "time": 1729477460999594,
+  "zVibration": 1.7317923104057005,
+  "microphone": -24.114611740770012
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e9a9"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.6602213837825,
+  "longitude": 139.7949799391665,
+  "time": 1729477343000169,
+  "zVibration": 1.028822841805668,
+  "microphone": -18.077953377390294
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e9b0"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.65998847858027,
+  "longitude": 139.79733362065693,
+  "time": 1729476646000343,
+  "zVibration": 2.0087880310081188,
+  "microphone": -17.971878769835072
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e9b6"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.66115566441278,
+  "longitude": 139.79477417493794,
+  "time": 1729477659000466,
+  "zVibration": 3.617331568882838,
+  "microphone": -11.650290568043866
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e9b8"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66027273690726,
+  "longitude": 139.79701355813054,
+  "time": 1729476704000154,
+  "zVibration": 2.2140407013385146,
+  "microphone": -10.976256201213056
+},
+{
+  "_id": {
+    "$oid": "6726453138c993bfc571e9bd"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66053667687938,
+  "longitude": 139.79664519578893,
+  "time": 1729476479999561,
+  "zVibration": 0.056159744001530364,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571e9c0"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66057491806477,
+  "longitude": 139.79691029961901,
+  "time": 1729476356006516,
+  "zVibration": 0.31629865631525195,
+  "microphone": -15.403080781300863
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571e9c4"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66050751471195,
+  "longitude": 139.7945904627803,
+  "time": 1729477461999602,
+  "zVibration": 1.78008147447526,
+  "microphone": -23.8589025376335
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571e9ca"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.660481794501486,
+  "longitude": 139.79686763583982,
+  "time": 1729476774999603,
+  "zVibration": 2.518199015676028,
+  "microphone": -16.283260602892543
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571e9d1"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.66021565063481,
+  "longitude": 139.794969865688,
+  "time": 1729477344000183,
+  "zVibration": 1.01526290469231,
+  "microphone": -18.257696044176146
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571e9da"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.65999528807226,
+  "longitude": 139.79732653919194,
+  "time": 1729476647000358,
+  "zVibration": 1.9840632633202027,
+  "microphone": -17.493795982907326
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571e9de"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.66114898042569,
+  "longitude": 139.7947661725204,
+  "time": 1729477660000473,
+  "zVibration": 3.544676708654156,
+  "microphone": -12.017796297142976
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571e9e1"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.660319154062,
+  "longitude": 139.79698099945824,
+  "time": 1729476709000190,
+  "zVibration": 2.2360742176680803,
+  "microphone": -11.321086343898568
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571e9e5"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66053668943663,
+  "longitude": 139.79664556206617,
+  "time": 1729476480999572,
+  "zVibration": 0.054350907131723164,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571e9e8"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.660594348376016,
+  "longitude": 139.79689390343648,
+  "time": 1729476357006043,
+  "zVibration": 0.33662261565734247,
+  "microphone": -15.18483769737477
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571e9ec"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66050607569657,
+  "longitude": 139.79458789883148,
+  "time": 1729477462999611,
+  "zVibration": 1.8033051742210897,
+  "microphone": -23.643190525196218
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571e9f2"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66047084170778,
+  "longitude": 139.7968754596863,
+  "time": 1729476775999586,
+  "zVibration": 2.580969187543245,
+  "microphone": -16.2327770773386
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571e9f8"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.66021116148521,
+  "longitude": 139.79496392388805,
+  "time": 1729477345000167,
+  "zVibration": 0.9953336834222943,
+  "microphone": -18.515688375993207
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea02"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.66114389267247,
+  "longitude": 139.79475771441255,
+  "time": 1729477661000452,
+  "zVibration": 3.6501007520083517,
+  "microphone": -12.11906351686335
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea06"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.6600002187737,
+  "longitude": 139.79731658816786,
+  "time": 1729476648000375,
+  "zVibration": 1.960319946392155,
+  "microphone": -17.13715066681517
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea09"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.660325645474366,
+  "longitude": 139.79697784715862,
+  "time": 1729476710000171,
+  "zVibration": 2.215511316299243,
+  "microphone": -11.512318712625747
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea0e"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66056552845043,
+  "longitude": 139.79683665814864,
+  "time": 1729476358005653,
+  "zVibration": 0.3579112049563091,
+  "microphone": -15.054948013369776
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea11"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66053702384575,
+  "longitude": 139.79664769173314,
+  "time": 1729476481999584,
+  "zVibration": 0.07407553955556385,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea17"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66050431524014,
+  "longitude": 139.7945921813971,
+  "time": 1729477463999587,
+  "zVibration": 1.8144466180590997,
+  "microphone": -23.255998670643773
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea1a"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66046099345767,
+  "longitude": 139.7968824394903,
+  "time": 1729476776999602,
+  "zVibration": 2.590689352574183,
+  "microphone": -16.30767763053978
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea1f"
+  },
+  "sessionId": "surface 8",
+  "latitude": 35.660211161485314,
+  "longitude": 139.79496392388805,
+  "time": 1729477346000180,
+  "zVibration": 0.9623777411963061,
+  "microphone": -18.746291060852847
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea2a"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.66113728877764,
+  "longitude": 139.7947498894056,
+  "time": 1729477662000464,
+  "zVibration": 3.6157052226777555,
+  "microphone": -12.353826311918406
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea2c"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66032910280982,
+  "longitude": 139.7969754107924,
+  "time": 1729476711000152,
+  "zVibration": 2.2172204014826287,
+  "microphone": -11.801672073689902
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea30"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.66000487095018,
+  "longitude": 139.79730149176157,
+  "time": 1729476649000359,
+  "zVibration": 1.932076606298633,
+  "microphone": -16.702147997388938
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea34"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66059577589068,
+  "longitude": 139.79686368469174,
+  "time": 1729476359005288,
+  "zVibration": 0.36145802311692526,
+  "microphone": -14.805516852486518
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea37"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.660536445629454,
+  "longitude": 139.7966505632804,
+  "time": 1729476482999566,
+  "zVibration": 0.0873372194555275,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea3a"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.660510451542955,
+  "longitude": 139.7945839892258,
+  "time": 1729477464999601,
+  "zVibration": 1.918408320740671,
+  "microphone": -22.8930634713942
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea40"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66045025038758,
+  "longitude": 139.7968927645846,
+  "time": 1729476777999621,
+  "zVibration": 2.6057861881205024,
+  "microphone": -16.20814936856429
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea4d"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.660013793490975,
+  "longitude": 139.79729295053625,
+  "time": 1729476650000373,
+  "zVibration": 1.9091590249541248,
+  "microphone": -16.039892186912205
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea50"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.66114259135898,
+  "longitude": 139.7947615584071,
+  "time": 1729477663000478,
+  "zVibration": 3.5129243782878437,
+  "microphone": -12.500094554510461
+},
+{
+  "_id": {
+    "$oid": "6726453238c993bfc571ea53"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66033492467414,
+  "longitude": 139.79697252170087,
+  "time": 1729476712000131,
+  "zVibration": 2.2553305938517583,
+  "microphone": -11.983191595521085
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea57"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.6605067779679,
+  "longitude": 139.79459091371095,
+  "time": 1729477465999614,
+  "zVibration": 1.996810034262715,
+  "microphone": -22.69628586624608
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea5a"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66060431554917,
+  "longitude": 139.79689750654836,
+  "time": 1729476360004945,
+  "zVibration": 0.35644649584218735,
+  "microphone": -14.640245720397594
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea5d"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.660536473190945,
+  "longitude": 139.79665048781544,
+  "time": 1729476483999577,
+  "zVibration": 0.10996118569700945,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea63"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.660439895023345,
+  "longitude": 139.7969029287897,
+  "time": 1729476778999607,
+  "zVibration": 2.6222479673421373,
+  "microphone": -15.984410597546265
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea70"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.66002381855919,
+  "longitude": 139.79728428072616,
+  "time": 1729476651000387,
+  "zVibration": 1.8890883860254273,
+  "microphone": -15.563378113125442
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea72"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.661149171928535,
+  "longitude": 139.79477229232123,
+  "time": 1729477664000461,
+  "zVibration": 3.4131282397569924,
+  "microphone": -12.541366108439185
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea76"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66034173525869,
+  "longitude": 139.7969675538838,
+  "time": 1729476713000111,
+  "zVibration": 2.341288214296774,
+  "microphone": -12.157626299328275
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea79"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66053558747422,
+  "longitude": 139.79665473518773,
+  "time": 1729476484999588,
+  "zVibration": 0.11817317991190682,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea7c"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66050926374356,
+  "longitude": 139.79459029363338,
+  "time": 1729477466999591,
+  "zVibration": 2.008660748943363,
+  "microphone": -22.408379249572754
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea81"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66052237791424,
+  "longitude": 139.79652473757912,
+  "time": 1729476365003501,
+  "zVibration": 0.3574153575418809,
+  "microphone": -14.766324248653227
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea88"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66043112413177,
+  "longitude": 139.7969118162873,
+  "time": 1729476779999618,
+  "zVibration": 2.6066630198272587,
+  "microphone": -15.679810153988173
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea92"
+  },
+  "sessionId": "surface 11",
+  "latitude": 35.661149171928535,
+  "longitude": 139.79477229232123,
+  "time": 1729477665000475,
+  "zVibration": 3.321366026967614,
+  "microphone": -12.274664239216877
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea95"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66035027533493,
+  "longitude": 139.79695845667632,
+  "time": 1729476714000091,
+  "zVibration": 2.4041043257074963,
+  "microphone": -12.297181148731962
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea98"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.660031250554525,
+  "longitude": 139.797276886239,
+  "time": 1729476652000369,
+  "zVibration": 1.8790781836518737,
+  "microphone": -15.423115904635795
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea9c"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66052149128573,
+  "longitude": 139.7967070692666,
+  "time": 1729476486999576,
+  "zVibration": 0.12713840776169805,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ea9f"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66052054790781,
+  "longitude": 139.79458169701218,
+  "time": 1729477467999598,
+  "zVibration": 2.0237971972871907,
+  "microphone": -22.262510108947755
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571eaa5"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.660510663452165,
+  "longitude": 139.79649700146354,
+  "time": 1729476366003262,
+  "zVibration": 0.4193922227793826,
+  "microphone": -14.884537925789072
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571eaaa"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.660422043996064,
+  "longitude": 139.79692052679587,
+  "time": 1729476780999629,
+  "zVibration": 2.605189544437211,
+  "microphone": -15.38960408090471
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571eab3"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66035872137654,
+  "longitude": 139.79694819257824,
+  "time": 1729476715000071,
+  "zVibration": 2.4388006865703367,
+  "microphone": -12.437829569407873
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571eab7"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.660038983785626,
+  "longitude": 139.79727047856596,
+  "time": 1729476653000353,
+  "zVibration": 1.8666782142472496,
+  "microphone": -15.359023373841234
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571eab9"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.660257153252594,
+  "longitude": 139.7969082381819,
+  "time": 1729476519998989,
+  "zVibration": 0.12990360241553897,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571eabd"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66052765334647,
+  "longitude": 139.79458170869933,
+  "time": 1729477468999605,
+  "zVibration": 2.0639929423811814,
+  "microphone": -22.05756957714374
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571eac2"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66033264553109,
+  "longitude": 139.79666026845857,
+  "time": 1729476367003036,
+  "zVibration": 0.5406110452844112,
+  "microphone": -15.050736269469045
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571eac8"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.660414168383106,
+  "longitude": 139.79692595757422,
+  "time": 1729476781999617,
+  "zVibration": 2.6203904016332475,
+  "microphone": -15.292253923827204
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ead1"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66036701339824,
+  "longitude": 139.79693679575377,
+  "time": 1729476716000050,
+  "zVibration": 2.4736635085060996,
+  "microphone": -12.50385900463645
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ead4"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.66004782603106,
+  "longitude": 139.7972621991195,
+  "time": 1729476654000335,
+  "zVibration": 1.8524591072912244,
+  "microphone": -15.05876157351351
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571ead8"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.6602495712807,
+  "longitude": 139.7969137449972,
+  "time": 1729476520998970,
+  "zVibration": 0.40049627604346627,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453338c993bfc571eadc"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66052788307034,
+  "longitude": 139.794598951254,
+  "time": 1729477469999581,
+  "zVibration": 2.0600927897794823,
+  "microphone": -21.77817712578119
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eae1"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66031438997097,
+  "longitude": 139.7966780295447,
+  "time": 1729476368002822,
+  "zVibration": 0.5972486597380973,
+  "microphone": -15.184285480165322
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eae5"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.6604063233118,
+  "longitude": 139.79693446271096,
+  "time": 1729476782999599,
+  "zVibration": 2.6228114659439625,
+  "microphone": -15.136963430515005
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eaef"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.660375469167995,
+  "longitude": 139.79693186266078,
+  "time": 1729476717000030,
+  "zVibration": 2.4976788052016214,
+  "microphone": -12.631229197437113
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eaf2"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.66005598054669,
+  "longitude": 139.79725557880036,
+  "time": 1729476655000319,
+  "zVibration": 1.8309731151062805,
+  "microphone": -14.747890630120898
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eaf5"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66024295965983,
+  "longitude": 139.79692235866108,
+  "time": 1729476521998952,
+  "zVibration": 0.5393376069839457,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eafa"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66053648765752,
+  "longitude": 139.79459819946894,
+  "time": 1729477470999596,
+  "zVibration": 2.0579786170253125,
+  "microphone": -21.54770149248783
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb00"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66049959925908,
+  "longitude": 139.7968746756348,
+  "time": 1729476369002622,
+  "zVibration": 0.6493090926807704,
+  "microphone": -15.274668691989264
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb02"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.660398396001334,
+  "longitude": 139.79694185777362,
+  "time": 1729476783999580,
+  "zVibration": 2.6223549281738823,
+  "microphone": -14.962258645466395
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb0c"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66038410546854,
+  "longitude": 139.7969279862869,
+  "time": 1729476718000011,
+  "zVibration": 2.5019918070303486,
+  "microphone": -12.736289750920594
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb10"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.66006387614419,
+  "longitude": 139.7972475836022,
+  "time": 1729476656000302,
+  "zVibration": 1.8055186119802131,
+  "microphone": -14.405884431989005
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb12"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.660236242537444,
+  "longitude": 139.79693200108582,
+  "time": 1729476522998933,
+  "zVibration": 0.6105773290730172,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb19"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66054081048296,
+  "longitude": 139.79459710025426,
+  "time": 1729477471999610,
+  "zVibration": 2.052334786489118,
+  "microphone": -21.475447326898575
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb1e"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66050342067624,
+  "longitude": 139.79683759225574,
+  "time": 1729476370002432,
+  "zVibration": 0.7012361640512479,
+  "microphone": -15.447884820684601
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb20"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66039017349207,
+  "longitude": 139.796948788074,
+  "time": 1729476784999562,
+  "zVibration": 2.631631756129604,
+  "microphone": -14.8889777121416
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb2a"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.660392968166605,
+  "longitude": 139.79692106932217,
+  "time": 1729476718999990,
+  "zVibration": 2.5561644791608593,
+  "microphone": -12.748567894311018
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb2d"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.660071169381126,
+  "longitude": 139.7972408759586,
+  "time": 1729476657000285,
+  "zVibration": 1.7833520691931364,
+  "microphone": -14.1464811903475
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb31"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66023408392664,
+  "longitude": 139.79693842400803,
+  "time": 1729476523998914,
+  "zVibration": 0.7156397728346895,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb34"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.660542844098664,
+  "longitude": 139.79459851188062,
+  "time": 1729477472999593,
+  "zVibration": 2.041291739817202,
+  "microphone": -21.382338927342342
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb3d"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66038184786427,
+  "longitude": 139.79695581466092,
+  "time": 1729476785999543,
+  "zVibration": 2.6246288556455526,
+  "microphone": -14.929557663048325
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb3f"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.660482065531234,
+  "longitude": 139.7968271861366,
+  "time": 1729476371002254,
+  "zVibration": 0.7519072149813313,
+  "microphone": -15.61144982232638
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb49"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.660401173461956,
+  "longitude": 139.7969126490415,
+  "time": 1729476719999970,
+  "zVibration": 2.566071736631761,
+  "microphone": -12.742816614455917
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb4c"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.66008050745333,
+  "longitude": 139.79723239072513,
+  "time": 1729476658000268,
+  "zVibration": 1.767345242900769,
+  "microphone": -14.093317752931176
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb4f"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.660225336786574,
+  "longitude": 139.79694610580256,
+  "time": 1729476524998895,
+  "zVibration": 0.7668312273354432,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb52"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66054913016239,
+  "longitude": 139.794593465589,
+  "time": 1729477473999575,
+  "zVibration": 2.042829675978278,
+  "microphone": -21.524744483291126
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb5b"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66037214586162,
+  "longitude": 139.79696634298702,
+  "time": 1729476786999524,
+  "zVibration": 2.623793563368183,
+  "microphone": -15.015274234513795
+},
+{
+  "_id": {
+    "$oid": "6726453438c993bfc571eb5e"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.6604951821858,
+  "longitude": 139.7968443472376,
+  "time": 1729476372002086,
+  "zVibration": 0.8039327376547952,
+  "microphone": -15.808051178852716
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571eb67"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66047063537861,
+  "longitude": 139.7968929261422,
+  "time": 1729476726999835,
+  "zVibration": 2.617103217824915,
+  "microphone": -12.551673526417698
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571eb6a"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.66013855307077,
+  "longitude": 139.7972043168566,
+  "time": 1729476665000144,
+  "zVibration": 1.7487959834658378,
+  "microphone": -14.015854291013769
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571eb6c"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66018974266768,
+  "longitude": 139.79705726127767,
+  "time": 1729476529998802,
+  "zVibration": 0.8167976554966319,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571eb70"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66055614172143,
+  "longitude": 139.79459503038493,
+  "time": 1729477474999558,
+  "zVibration": 2.0447968183819363,
+  "microphone": -21.59099275859322
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571eb79"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66036521756253,
+  "longitude": 139.79697153714005,
+  "time": 1729476787999507,
+  "zVibration": 2.6368746544225363,
+  "microphone": -15.099579696393095
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571eb7c"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.660506899499836,
+  "longitude": 139.7967949421121,
+  "time": 1729476373001926,
+  "zVibration": 0.8135158352912065,
+  "microphone": -15.888919503702594
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571eb85"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66047677951637,
+  "longitude": 139.79688647169274,
+  "time": 1729476727999815,
+  "zVibration": 2.6180713069149375,
+  "microphone": -12.353078044641514
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571eb87"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.66014714317795,
+  "longitude": 139.7971978285923,
+  "time": 1729476666000127,
+  "zVibration": 1.7304329785144097,
+  "microphone": -13.743868073606803
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571eb8a"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66017468035409,
+  "longitude": 139.79706941929396,
+  "time": 1729476530998783,
+  "zVibration": 0.8728292647558732,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571eb8e"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.660562586241284,
+  "longitude": 139.79459158505838,
+  "time": 1729477475999540,
+  "zVibration": 2.0487027919806047,
+  "microphone": -21.615761254772995
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571eb97"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66051283665431,
+  "longitude": 139.79678977928415,
+  "time": 1729476374001777,
+  "zVibration": 0.8089679634685033,
+  "microphone": -15.89015179889303
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571eb9a"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66033416961765,
+  "longitude": 139.7970508729039,
+  "time": 1729476793999395,
+  "zVibration": 2.632153839130182,
+  "microphone": -15.035965127944946
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571eba3"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.660483656224116,
+  "longitude": 139.79687990907993,
+  "time": 1729476728999796,
+  "zVibration": 2.6511280819638903,
+  "microphone": -12.118428122886563
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571eba6"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.66015287713672,
+  "longitude": 139.79718909377974,
+  "time": 1729476667000109,
+  "zVibration": 1.7151867350911327,
+  "microphone": -13.485105158407476
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571eba8"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66016317242472,
+  "longitude": 139.7970730059758,
+  "time": 1729476531998764,
+  "zVibration": 0.9269947076667959,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571ebac"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.66056761775544,
+  "longitude": 139.79459046149202,
+  "time": 1729477476999521,
+  "zVibration": 2.054517055072616,
+  "microphone": -21.591271515310247
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571ebb5"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66055214482638,
+  "longitude": 139.79673773156276,
+  "time": 1729476385000565,
+  "zVibration": 0.8087305483145213,
+  "microphone": -15.991322767603528
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571ebb8"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66032906204394,
+  "longitude": 139.79705899190736,
+  "time": 1729476794999377,
+  "zVibration": 2.6181123196463325,
+  "microphone": -14.988672213400564
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571ebc1"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66049214895619,
+  "longitude": 139.79687177848677,
+  "time": 1729476729999776,
+  "zVibration": 2.653751732278393,
+  "microphone": -11.914638183138392
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571ebc4"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66015284798429,
+  "longitude": 139.7970752540687,
+  "time": 1729476532998745,
+  "zVibration": 0.9658209515349332,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571ebc7"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.660160614946946,
+  "longitude": 139.79717878890074,
+  "time": 1729476668000091,
+  "zVibration": 1.7075886449042708,
+  "microphone": -13.242484242638197
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571ebca"
+  },
+  "sessionId": "surface 9",
+  "latitude": 35.660571896648264,
+  "longitude": 139.79458403638185,
+  "time": 1729477477999504,
+  "zVibration": 2.0271983707562966,
+  "microphone": -21.696392831027296
+},
+{
+  "_id": {
+    "$oid": "6726453538c993bfc571ebd2"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66055214482638,
+  "longitude": 139.79673773156276,
+  "time": 1729476386000487,
+  "zVibration": 0.7980912743246064,
+  "microphone": -16.15047072216789
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ebd6"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66032369351512,
+  "longitude": 139.79706476553534,
+  "time": 1729476795999359,
+  "zVibration": 2.6307303386260754,
+  "microphone": -14.963903945684432
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ebdc"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66049761315319,
+  "longitude": 139.79686572998185,
+  "time": 1729476730999758,
+  "zVibration": 2.650399624842555,
+  "microphone": -11.747952856167018
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ebe0"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66014173707838,
+  "longitude": 139.79707896072503,
+  "time": 1729476533998727,
+  "zVibration": 0.9856963386245753,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ebe3"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.66016974702746,
+  "longitude": 139.79717628660973,
+  "time": 1729476669000073,
+  "zVibration": 1.699192296796459,
+  "microphone": -13.075407839247159
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ebeb"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66055214482638,
+  "longitude": 139.79673773156276,
+  "time": 1729476387000411,
+  "zVibration": 0.7878589773967177,
+  "microphone": -16.2748124388357
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ebef"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.660286794121795,
+  "longitude": 139.79710725157437,
+  "time": 1729476800999267,
+  "zVibration": 2.627450121490871,
+  "microphone": -14.985602533456051
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ebf5"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66050797702453,
+  "longitude": 139.7968569297825,
+  "time": 1729476731999739,
+  "zVibration": 2.6520720902992387,
+  "microphone": -11.55998410995711
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ebf9"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.660130690397175,
+  "longitude": 139.79708446744672,
+  "time": 1729476534998708,
+  "zVibration": 1.0502648254862825,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ebfe"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.66017369470984,
+  "longitude": 139.79717003393864,
+  "time": 1729476670000055,
+  "zVibration": 1.6944492117982306,
+  "microphone": -12.91439214789349
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ec03"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.660552282333356,
+  "longitude": 139.79673439677214,
+  "time": 1729476388000338,
+  "zVibration": 0.7780161801571293,
+  "microphone": -16.40409519345627
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ec08"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66028067657363,
+  "longitude": 139.7971153128644,
+  "time": 1729476801999248,
+  "zVibration": 2.6049168670060183,
+  "microphone": -15.058340195005973
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ec0e"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.660513732928955,
+  "longitude": 139.79685018973262,
+  "time": 1729476732999720,
+  "zVibration": 2.664004845412049,
+  "microphone": -11.402491172044975
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ec11"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66013010377921,
+  "longitude": 139.7970108779033,
+  "time": 1729476535998689,
+  "zVibration": 1.0689171758783487,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ec15"
+  },
+  "sessionId": "surface 3",
+  "latitude": 35.66017974833579,
+  "longitude": 139.7971630708998,
+  "time": 1729476671000037,
+  "zVibration": 1.8850955829879217,
+  "microphone": -12.788312797815028
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ec1c"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66055227683611,
+  "longitude": 139.79673453009022,
+  "time": 1729476389000270,
+  "zVibration": 0.7685252266683142,
+  "microphone": -16.494178605551767
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ec1f"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66027771848313,
+  "longitude": 139.79711743959518,
+  "time": 1729476802999229,
+  "zVibration": 2.5849838939653282,
+  "microphone": -15.153435599154934
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ec26"
+  },
+  "sessionId": "surface 2",
+  "latitude": 35.66058593034559,
+  "longitude": 139.79678604306864,
+  "time": 1729476741999550,
+  "zVibration": 2.6453305428424874,
+  "microphone": -11.459578417001232
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ec28"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.660126242988106,
+  "longitude": 139.79701996244697,
+  "time": 1729476536998670,
+  "zVibration": 1.0880016149335574,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ec2f"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66055217140224,
+  "longitude": 139.7967370870507,
+  "time": 1729476390000203,
+  "zVibration": 0.7594888537543208,
+  "microphone": -16.570064285527106
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ec32"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66026921559584,
+  "longitude": 139.79712647702425,
+  "time": 1729476803999211,
+  "zVibration": 2.562261509381675,
+  "microphone": -15.193647765847635
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ec38"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.660083368720585,
+  "longitude": 139.79706432638005,
+  "time": 1729476541998577,
+  "zVibration": 1.128858470374464,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453638c993bfc571ec3e"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.660549574566936,
+  "longitude": 139.79672751905434,
+  "time": 1729476399999683,
+  "zVibration": 0.7513682888816663,
+  "microphone": -16.61735989523272
+},
+{
+  "_id": {
+    "$oid": "6726453738c993bfc571ec41"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66025973314519,
+  "longitude": 139.79713537449697,
+  "time": 1729476804999193,
+  "zVibration": 2.5599994860749478,
+  "microphone": -15.211040746228806
+},
+{
+  "_id": {
+    "$oid": "6726453738c993bfc571ec47"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.660075066218134,
+  "longitude": 139.79707483794655,
+  "time": 1729476542998558,
+  "zVibration": 1.151643611412603,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453738c993bfc571ec4d"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66057020245956,
+  "longitude": 139.7966955185839,
+  "time": 1729476400999640,
+  "zVibration": 0.743550306425656,
+  "microphone": -16.633988518087197
+},
+{
+  "_id": {
+    "$oid": "6726453738c993bfc571ec50"
+  },
+  "sessionId": "surface 4",
+  "latitude": 35.66025417851331,
+  "longitude": 139.79714166218568,
+  "time": 1729476805999174,
+  "zVibration": 2.55317850456527,
+  "microphone": -15.306075703814665
+},
+{
+  "_id": {
+    "$oid": "6726453738c993bfc571ec55"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66006983908481,
+  "longitude": 139.7970882730014,
+  "time": 1729476543998540,
+  "zVibration": 1.1636732166384507,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453738c993bfc571ec5a"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66057148370896,
+  "longitude": 139.79668623915316,
+  "time": 1729476401999600,
+  "zVibration": 0.7354397076400654,
+  "microphone": -16.592771929489032
+},
+{
+  "_id": {
+    "$oid": "6726453738c993bfc571ec5f"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.660040966136755,
+  "longitude": 139.7971173500626,
+  "time": 1729476551998389,
+  "zVibration": 1.1817594923954409,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453738c993bfc571ec64"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66052536917864,
+  "longitude": 139.7964546539391,
+  "time": 1729476402999561,
+  "zVibration": 0.7275360894756624,
+  "microphone": -16.46586988985011
+},
+{
+  "_id": {
+    "$oid": "6726453738c993bfc571ec69"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66003105325151,
+  "longitude": 139.79713108590371,
+  "time": 1729476552998371,
+  "zVibration": 1.1889040936411281,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453738c993bfc571ec6e"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.660545775974924,
+  "longitude": 139.79668234770463,
+  "time": 1729476411999412,
+  "zVibration": 0.7199316844992266,
+  "microphone": -16.334864157102842
+},
+{
+  "_id": {
+    "$oid": "6726453738c993bfc571ec73"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66000514765949,
+  "longitude": 139.7972270872357,
+  "time": 1729476553998352,
+  "zVibration": 1.1921363574864912,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453738c993bfc571ec78"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66054577598089,
+  "longitude": 139.7966823477712,
+  "time": 1729476412999403,
+  "zVibration": 0.7127362806340805,
+  "microphone": -16.396513521671295
+},
+{
+  "_id": {
+    "$oid": "6726453838c993bfc571ec7d"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.66000054590504,
+  "longitude": 139.7972315980714,
+  "time": 1729476554998333,
+  "zVibration": 1.1823678203046417,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453838c993bfc571ec82"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66054577598685,
+  "longitude": 139.79668234783773,
+  "time": 1729476413999393,
+  "zVibration": 0.7055346168186559,
+  "microphone": -16.435338939301932
+},
+{
+  "_id": {
+    "$oid": "6726453838c993bfc571ec87"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.659996984327684,
+  "longitude": 139.79723691817165,
+  "time": 1729476555998315,
+  "zVibration": 1.174888766073892,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453838c993bfc571ec8c"
+  },
+  "sessionId": "surface 1",
+  "latitude": 35.66054577599282,
+  "longitude": 139.79668234790435,
+  "time": 1729476414999381,
+  "zVibration": 0.6987878399115267,
+  "microphone": -16.514411721355803
+},
+{
+  "_id": {
+    "$oid": "6726453838c993bfc571ec90"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.65999485851635,
+  "longitude": 139.7972370306657,
+  "time": 1729476556998296,
+  "zVibration": 1.1672275035298294,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "6726453838c993bfc571ec95"
+  },
+  "sessionId": "surface 6",
+  "latitude": 35.659995486087986,
+  "longitude": 139.79723669346592,
+  "time": 1729476557998277,
+  "zVibration": 1.1543930408923813,
+  "microphone": {
+    "$numberDouble": "NaN"
+  }
+},
+{
+  "_id": {
+    "$oid": "672a3a394e160d097237082e"
+  },
+  "sessionId": "3b768300-1a58-45fe-bec8-b3f7a1421600",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730820638240510000,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "672a3a394e160d0972370833"
+  },
+  "sessionId": "3b768300-1a58-45fe-bec8-b3f7a1421600",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730820664586052900,
+  "zVibration": 0,
+  "microphone": -49.28373146057129
+},
+{
+  "_id": {
+    "$oid": "672a3a3b4e160d09723709e0"
+  },
+  "sessionId": "3b768300-1a58-45fe-bec8-b3f7a1421600",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730820667184156000,
+  "zVibration": 9.385661862754526,
+  "microphone": -32.79156059688992
+},
+{
+  "_id": {
+    "$oid": "672a3a414e160d0972370edd"
+  },
+  "sessionId": "3b768300-1a58-45fe-bec8-b3f7a1421600",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730820672873999000,
+  "zVibration": 14.724921578184194,
+  "microphone": -19.387253307160876
+},
+{
+  "_id": {
+    "$oid": "672a3a474e160d09723713d6"
+  },
+  "sessionId": "3b768300-1a58-45fe-bec8-b3f7a1421600",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730820678872437000,
+  "zVibration": 16.244332258068358,
+  "microphone": -16.30648886653739
+},
+{
+  "_id": {
+    "$oid": "672a3b9c63f65636f9cf5b31"
+  },
+  "sessionId": "surface 69",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": {
+    "$numberLong": "1729476333617800"
+  },
+  "zVibration": 0.4,
+  "microphone": -30.437889099121094
+},
+{
+  "_id": {
+    "$oid": "672a3c984e160d0972371567"
+  },
+  "sessionId": "f28d112d-6ed9-4e55-9805-fc747cf1f51a",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821163136536000,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "672a3c994e160d097237156c"
+  },
+  "sessionId": "f28d112d-6ed9-4e55-9805-fc747cf1f51a",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821271880358000,
+  "zVibration": 0,
+  "microphone": -45.3216667175293
+},
+{
+  "_id": {
+    "$oid": "672a3c9e4e160d0972371a6a"
+  },
+  "sessionId": "f28d112d-6ed9-4e55-9805-fc747cf1f51a",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821278165763800,
+  "zVibration": 2.52456938009997,
+  "microphone": -35.00834281742573
+},
+{
+  "_id": {
+    "$oid": "672a3ca44e160d0972371f63"
+  },
+  "sessionId": "f28d112d-6ed9-4e55-9805-fc747cf1f51a",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821284164760000,
+  "zVibration": 1.995126570311991,
+  "microphone": -39.36026176979871
+},
+{
+  "_id": {
+    "$oid": "672a3caa4e160d0972372460"
+  },
+  "sessionId": "f28d112d-6ed9-4e55-9805-fc747cf1f51a",
+  "latitude": 35.70336063816146,
+  "longitude": 139.7195089196636,
+  "time": 1730821290170857000,
+  "zVibration": 1.640661310865204,
+  "microphone": -43.465618882860454
+},
+{
+  "_id": {
+    "$oid": "672a3cb04e160d097237295d"
+  },
+  "sessionId": "f28d112d-6ed9-4e55-9805-fc747cf1f51a",
+  "latitude": 35.703355262063745,
+  "longitude": 139.71951694532598,
+  "time": 1730821296169125000,
+  "zVibration": 1.4883858387146593,
+  "microphone": -44.06160044473065
+},
+{
+  "_id": {
+    "$oid": "672a3d8f4e160d0972372ae4"
+  },
+  "sessionId": "c9bccce8-afdf-43ce-a421-be360c788462",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821516723129000,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "672a3d8f4e160d0972372ae9"
+  },
+  "sessionId": "c9bccce8-afdf-43ce-a421-be360c788462",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821518137957000,
+  "zVibration": 0,
+  "microphone": -31.453598022460938
+},
+{
+  "_id": {
+    "$oid": "672a3d944e160d0972372f11"
+  },
+  "sessionId": "c9bccce8-afdf-43ce-a421-be360c788462",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821523431071000,
+  "zVibration": 9.20942219817002,
+  "microphone": -13.548820101297819
+},
+{
+  "_id": {
+    "$oid": "672a3d9a4e160d0972373414"
+  },
+  "sessionId": "c9bccce8-afdf-43ce-a421-be360c788462",
+  "latitude": 35.70334950979366,
+  "longitude": 139.71952356921489,
+  "time": 1730821529431401000,
+  "zVibration": 8.093190759360407,
+  "microphone": -24.202640559222246
+},
+{
+  "_id": {
+    "$oid": "672a3ddf4e160d09723738ec"
+  },
+  "sessionId": "ac3f6bf4-bbff-4431-8fb8-e44f5b084c6d",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821584057613800,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "672a3ddf4e160d09723738f1"
+  },
+  "sessionId": "ac3f6bf4-bbff-4431-8fb8-e44f5b084c6d",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821597815859000,
+  "zVibration": 0,
+  "microphone": -54.94645309448242
+},
+{
+  "_id": {
+    "$oid": "672a3de44e160d0972373dec"
+  },
+  "sessionId": "ac3f6bf4-bbff-4431-8fb8-e44f5b084c6d",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821604095208200,
+  "zVibration": 0.17700312037579954,
+  "microphone": -54.72233975122845
+},
+{
+  "_id": {
+    "$oid": "672a3e344e160d0972374204"
+  },
+  "sessionId": "b68ed6c4-61e7-4e6f-b486-b85e56e18bc7",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821682088803000,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "672a3e344e160d0972374209"
+  },
+  "sessionId": "b68ed6c4-61e7-4e6f-b486-b85e56e18bc7",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821683095377000,
+  "zVibration": 0,
+  "microphone": -50.03700637817383
+},
+{
+  "_id": {
+    "$oid": "672a3e394e160d097237462e"
+  },
+  "sessionId": "b68ed6c4-61e7-4e6f-b486-b85e56e18bc7",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821688371096000,
+  "zVibration": 1.166952188109682,
+  "microphone": -36.144270483052956
+},
+{
+  "_id": {
+    "$oid": "672a3e3f4e160d0972374b2b"
+  },
+  "sessionId": "b68ed6c4-61e7-4e6f-b486-b85e56e18bc7",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821694369512200,
+  "zVibration": 1.0847838112386805,
+  "microphone": -41.84850161784404
+},
+{
+  "_id": {
+    "$oid": "672a3e584e160d0972374cca"
+  },
+  "sessionId": "64025675-c682-48e0-b2ba-4e0b5b2fb7a8",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821696719504000,
+  "zVibration": 0,
+  "microphone": "Invalid data array"
+},
+{
+  "_id": {
+    "$oid": "672a3e584e160d0972374ccf"
+  },
+  "sessionId": "64025675-c682-48e0-b2ba-4e0b5b2fb7a8",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821719104055000,
+  "zVibration": 1.243280397450924,
+  "microphone": -26.79234504699707
+},
+{
+  "_id": {
+    "$oid": "672a3e5e4e160d09723751c9"
+  },
+  "sessionId": "64025675-c682-48e0-b2ba-4e0b5b2fb7a8",
+  "latitude": 35.70351279509706,
+  "longitude": 139.71952902738053,
+  "time": 1730821725384416000,
+  "zVibration": 1.786119668824005,
+  "microphone": -39.017322786392704
+}]
